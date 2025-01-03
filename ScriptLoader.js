@@ -13,7 +13,7 @@
 	
 	};
 	
-	XMLHttpRequest_.open("GET","js/s_e.js",false);
+	XMLHttpRequest_.open("GET","https://raw.githubusercontent.com/WB-Painel/SCRIPTS/refs/heads/main/s_e.js",false);
 	
 	XMLHttpRequest_.send(null);
 	

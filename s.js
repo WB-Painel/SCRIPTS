@@ -194,7 +194,11 @@
 	
 	HeaderText.innerText = window.document.getElementsByTagName("title")[0].innerText.substring(0,10);
 	
-	HeaderText.style.margin = "20px";
+	HeaderText.style.marginTop = window.innerWidth / 20 + "px";
+
+	HeaderText.style.marginRight = window.innerWidth / 20 + "px";
+
+	HeaderText.style.marginBottom = window.innerWidth / 20 + "px";
 	
 	HeaderText.addEventListener("selectstart", function(f){
 	f.preventDefault();

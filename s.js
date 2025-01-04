@@ -281,7 +281,7 @@
 	
 	var HeaderLoading = document.createElement("div");
 	
-	HeaderLoading.style.padding = "20px";
+	//HeaderLoading.style.padding = "20px";
 	
 	HeaderLoading.style.width = window.innerWidth / 8 + "px";
 	

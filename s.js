@@ -238,8 +238,6 @@
 	
 	HeaderDownload.style.height = window.innerHeight / 16 + "px";
 	
-	//HeaderDownload.style.padding = "20px";
-	
 	HeaderDownload.style.borderTopLeftRadius = "10px";
 	
 	HeaderDownload.style.borderTopRightRadius = "10px";
@@ -264,9 +262,11 @@
 	
 	HeaderDownload.innerText = "Download";
 	
-	HeaderDownload.style.margin = "20px";
-	
-	//HeaderDownload.setAttribute("unselectable","on");
+	HeaderDownload.style.marginTop = window.innerWidth / 24 + "px";
+
+	HeaderDownload.style.marginRight = window.innerWidth / 24 + "px";
+
+	HeaderDownload.style.marginBottom = window.innerWidth / 24 + "px";
 	
 	HeaderDownload.addEventListener("selectstart", function(f){
 	f.preventDefault();

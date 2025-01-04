@@ -178,7 +178,7 @@
 	
 	HeaderIcon.style.backgroundSize = "100%";
 	
-	HeaderIcon.style.margin = "20px";
+	HeaderIcon.style.margin = window.innerWidth / 20 + "px";
 	
 	return HeaderIcon;
 	

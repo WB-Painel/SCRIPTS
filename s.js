@@ -125,9 +125,9 @@
 	
 	Header.style.margin = "10px";
 	
-	Header.style.marginTop = "100px";
+	Header.style.marginTop = window.innerWidth / 16 + "px";
 	
-	Header.style.marginBottom = "100px";
+	Header.style.marginBottom = window.innerWidth / 16 + "px";
 	
 	Header.style.boxShadow = "4px 4px 10px 1px #3ded97";
 	

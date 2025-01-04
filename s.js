@@ -234,7 +234,7 @@
 	
 	HeaderDownload.style.height = window.innerHeight / 16 + "px";
 	
-	HeaderDownload.style.padding = "20px";
+	//HeaderDownload.style.padding = "20px";
 	
 	HeaderDownload.style.borderTopLeftRadius = "10px";
 	
@@ -283,9 +283,9 @@
 	
 	HeaderLoading.style.padding = "20px";
 	
-	HeaderLoading.style.width = "100px";
+	HeaderLoading.style.width = window.innerWidth / 8 + "px";
 	
-	HeaderLoading.style.height = "100px";
+	HeaderLoading.style.height = window.innerWidth / 8 + "px";
 	
 	HeaderLoading.style.backgroundImage = "url('https://raw.githubusercontent.com/WB-Painel/SCRIPTS/refs/heads/main/image/173582474948771690.png')";
 	

@@ -287,7 +287,7 @@
 	
 	HeaderLoading.style.height = "100px";
 	
-	HeaderLoading.style.backgroundImage = "url('image/173582474948771690.png')";
+	HeaderLoading.style.backgroundImage = "url('https://raw.githubusercontent.com/WB-Painel/SCRIPTS/refs/heads/main/image/173582474948771690.png')";
 	
 	HeaderLoading.style.backgroundRepeat = "no-repeat";
 	

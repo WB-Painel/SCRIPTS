@@ -264,7 +264,7 @@
 	
 	HeaderDownload.style.marginTop = window.innerWidth / 24 + "px";
 
-	HeaderDownload.style.marginRight = window.innerWidth / 24 + "px";
+	HeaderDownload.style.marginLeft = window.innerWidth / 24 + "px";
 
 	HeaderDownload.style.marginBottom = window.innerWidth / 24 + "px";
 	

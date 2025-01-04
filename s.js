@@ -12,6 +12,8 @@
 	Visible = false;
 	
 	URL = Download.children[0].href;
+
+	URL = URL.substring(0,10);
 	
 	enabled = false;
 	

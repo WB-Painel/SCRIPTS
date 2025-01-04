@@ -407,6 +407,8 @@
 	function BlockOne(){
 	
 	var BlockOne = document.createElement("div");
+
+	BlockOne.id = "BlockOne";
 	
 	BlockOne.style.display = "flex";
 	
@@ -430,9 +432,9 @@
 	
 	BlockOne.style.margin = "10px";
 	
-	//BlockOne.appendChild(AdOne());
+	BlockOne.appendChild(AdOne());
 	
-	//BlockOne.appendChild(BlockAdClick());
+	BlockOne.appendChild(BlockAdClick());
 	
 	return BlockOne;
 	
@@ -441,6 +443,8 @@
 	function BlockTwo(){
 	
 	var BlockTwo = document.createElement("div");
+
+	BlockTwo.id = "BlockTwo";
 	
 	BlockTwo.style.display = "flex";
 	
@@ -464,9 +468,9 @@
 	
 	BlockTwo.style.margin = "10px";
 	
-	//BlockTwo.appendChild(AdTwo());
+	BlockTwo.appendChild(AdTwo());
 	
-	//BlockTwo.appendChild(BlockAdClick());
+	BlockTwo.appendChild(BlockAdClick());
 	
 	return BlockTwo;
 	
@@ -475,6 +479,8 @@
 	function BlockTree(){
 	
 	var BlockTree = document.createElement("div");
+
+	BlockTree.id = "BlockTree";
 	
 	BlockTree.style.display = "flex";
 	
@@ -498,9 +504,9 @@
 	
 	BlockTree.style.margin = "10px";
 	
-	//BlockTree.appendChild(AdTree());
+	BlockTree.appendChild(AdTree());
 	
-	//BlockTree.appendChild(BlockAdClick());
+	BlockTree.appendChild(BlockAdClick());
 	
 	return BlockTree;
 	
@@ -509,7 +515,7 @@
 	
 	function AdOne(){
 	
-	var AdOne = document.getElementById("a");
+	var AdOne = document.getElementById("code-block code-block-1");
 	
 	return AdOne.children[0].children[0];
 	
@@ -517,7 +523,7 @@
 	
 	function AdTwo(){
 	
-	var AdOne = document.getElementById("b");
+	var AdOne = document.getElementById("code-block code-block-2");
 	
 	return AdOne.children[0].children[0];
 	
@@ -525,7 +531,7 @@
 	
 	function AdTree(){
 	
-	var AdOne = document.getElementById("c");
+	var AdOne = document.getElementById("code-block code-block-3");
 	
 	return AdOne.children[0].children[0];
 	
@@ -587,15 +593,17 @@
 	
 	setTimeout(function(){
 	
-	var AdOne = document.getElementById("a3");
+	var AdOne = document.getElementById("BlockOne").children[0];
+
+	AdOne.id;
 	
 	AdOne.contentWindow.document.getElementById("cbb").parentNode.parentNode.style.pointerEvents = "none";
 	
-	var AdTwo = document.getElementById("b3");
+	var AdTwo = document.getElementById("BlockTwo").children[0];
 	
 	AdTwo.contentWindow.document.getElementById("cbb").parentNode.parentNode.style.pointerEvents = "none";
 	
-	var AdTree = document.getElementById("c3");
+	var AdTree = document.getElementById("BlockTree").children[0];
 	
 	AdTree.contentWindow.document.getElementById("cbb").parentNode.parentNode.style.pointerEvents = "none";
 	

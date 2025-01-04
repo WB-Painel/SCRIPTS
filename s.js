@@ -515,9 +515,9 @@
 	
 	function AdOne(){
 	
-	var AdOne = document.getElementById("code-block code-block-1");
+	var AdOne = document.getElementById("div-gpt-ad-3088428-1");
 	
-	return AdOne.children[0].children[0];
+	return AdOne.children[1].children[0];
 	
 	}
 	

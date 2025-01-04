@@ -24,7 +24,7 @@
 	if(Download_CoordinateY<ScreenHeight)
 	
 	if(!Visible){
-	alert("$");
+	
 	Visible=true;
 	
 	DownloadBlock();

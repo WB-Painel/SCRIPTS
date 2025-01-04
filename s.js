@@ -434,7 +434,7 @@
 	
 	BlockOne.appendChild(AdOne());
 	
-	//BlockOne.appendChild(BlockAdClick());
+	BlockOne.appendChild(BlockAdClick());
 	
 	return BlockOne;
 	
@@ -468,9 +468,9 @@
 	
 	BlockTwo.style.margin = "10px";
 	
-	//BlockTwo.appendChild(AdTwo());
+	BlockTwo.appendChild(AdTwo());
 	
-	//BlockTwo.appendChild(BlockAdClick());
+	BlockTwo.appendChild(BlockAdClick());
 	
 	return BlockTwo;
 	
@@ -504,9 +504,9 @@
 	
 	BlockTree.style.margin = "10px";
 	
-	//BlockTree.appendChild(AdTree());
+	BlockTree.appendChild(AdTree());
 	
-	//BlockTree.appendChild(BlockAdClick());
+	BlockTree.appendChild(BlockAdClick());
 	
 	return BlockTree;
 	
@@ -517,26 +517,23 @@
 	
 	var AdOne = document.getElementById("div-gpt-ad-3088428-1");
 	
-	var aa = AdOne.children[0];
-
-	alert(AdOne.innerHTML+","+aa.innerHTML);
-
 	return AdOne;
+	
 	}
 	
 	function AdTwo(){
 	
-	var AdOne = document.getElementById("code-block code-block-2");
+	var AdOne = document.getElementById("div-gpt-ad-3088428-2");
 	
-	return AdOne.children[0].children[0];
+	return AdOne;
 	
 	}
 	
 	function AdTree(){
 	
-	var AdOne = document.getElementById("code-block code-block-3");
+	var AdOne = document.getElementById("div-gpt-ad-3088428-3");
 	
-	return AdOne.children[0].children[0];
+	return AdOne;
 	
 	}
 	

@@ -517,9 +517,9 @@
 	
 	var AdOne = document.getElementById("div-gpt-ad-3088428-1");
 	
-	//var aa = AdOne.children[1].children[0];
+	var aa = AdOne.children[1];
 
-	alert(AdOne.innerHTML);
+	alert(aa.innerHTML);
 
 	return AdOne;
 	}

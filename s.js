@@ -434,7 +434,7 @@
 	
 	BlockOne.appendChild(AdOne());
 	
-	BlockOne.appendChild(BlockAdClick());
+	//BlockOne.appendChild(BlockAdClick());
 	
 	return BlockOne;
 	
@@ -468,9 +468,9 @@
 	
 	BlockTwo.style.margin = "10px";
 	
-	BlockTwo.appendChild(AdTwo());
+	//BlockTwo.appendChild(AdTwo());
 	
-	BlockTwo.appendChild(BlockAdClick());
+	//BlockTwo.appendChild(BlockAdClick());
 	
 	return BlockTwo;
 	
@@ -504,9 +504,9 @@
 	
 	BlockTree.style.margin = "10px";
 	
-	BlockTree.appendChild(AdTree());
+	//BlockTree.appendChild(AdTree());
 	
-	BlockTree.appendChild(BlockAdClick());
+	//BlockTree.appendChild(BlockAdClick());
 	
 	return BlockTree;
 	

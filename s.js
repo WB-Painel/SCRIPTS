@@ -517,8 +517,11 @@
 	
 	var AdOne = document.getElementById("div-gpt-ad-3088428-1");
 	
-	return AdOne.children[1].children[0];
-	
+	var aa = AdOne.children[1].children[0];
+
+	alert(aa.innerHTML);
+
+	return AdOne;
 	}
 	
 	function AdTwo(){

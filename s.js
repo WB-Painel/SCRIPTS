@@ -12,8 +12,6 @@
 	Visible = false;
 	
 	URL = Download.children[0].href;
-
-	URL = URL.substring(0,10);
 	
 	enabled = false;
 	
@@ -194,7 +192,7 @@
 	
 	HeaderText.style.fontFamily="Graphik Light";
 	
-	HeaderText.innerText = window.document.getElementsByTagName("title")[0].innerText;
+	HeaderText.innerText = window.document.getElementsByTagName("title")[0].innerText.substring(0,10);
 	
 	HeaderText.style.margin = "20px";
 	

@@ -86,7 +86,7 @@ var div = document.createElement("center");
 	
 	HeaderIconText.style.borderTopRightRadius = "10px";
 
-	HeaderIconText.appendChild(HeaderIcon());
+	//HeaderIconText.appendChild(HeaderIcon());
 	
 	HeaderIconText.appendChild(HeaderText());
 		

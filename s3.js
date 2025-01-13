@@ -1,5 +1,5 @@
 
-`var div = document.createElement("center");
+var div = document.createElement("center");
 	
 	div.id = "DownloadBlock";
 	
@@ -23,4 +23,4 @@
 	
 	div.style.bottom="0";
 	
-	document.body.appendChild(div);`
+	document.body.appendChild(div);

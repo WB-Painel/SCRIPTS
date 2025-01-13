@@ -101,8 +101,6 @@ function HeaderText(){
 
 	HeaderText.style.fontFamily = "Graphik Light";
 	
-	HeaderText.innerText = window.document.getElementsByTagName("title")[0].innerText.substring(0,10);
-	
 	HeaderText.style.marginTop = window.innerWidth / 20 + "px";
 
 	HeaderText.style.marginRight = window.innerWidth / 20 + "px";

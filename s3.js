@@ -1,5 +1,5 @@
-<script>
-var div = document.createElement("center");
+
+`var div = document.createElement("center");
 	
 	div.id = "DownloadBlock";
 	
@@ -25,6 +25,4 @@ var div = document.createElement("center");
 	
 	document.body.appendChild(div);
 
-alert(window.innerWidth);
-
-</script>
+alert(window.innerWidth);`

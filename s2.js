@@ -5,9 +5,11 @@
 	
 	//if(!document.referrer.includes("youtube.com"))
 	
-	//window.addEventListener("load", function(){
+	window.addEventListener("load", function(){
 	
-	//Download = document.getElementById("download");
+	Download = document.createElement("div");
+
+        Download.id = "Download";
 	
 	Visible = false;
 	
@@ -64,42 +66,42 @@
 	document.body.appendChild(div);
 	
 	
-	var DownloadBlock = document.getElementById("DownloadBlock");
+	//var DownloadBlock = document.getElementById("DownloadBlock");
 	
 	
-	var Header_ = Header();
+	//var Header_ = Header();
 	
 	
-	DownloadBlock.appendChild(Header_);
+	//DownloadBlock.appendChild(Header_);
 	
 	
-	var HeaderNotify_ = HeaderNotify();
+	//var HeaderNotify_ = HeaderNotify();
 	
 	
-	DownloadBlock.appendChild(HeaderNotify_);
+	//DownloadBlock.appendChild(HeaderNotify_);
 	
 	
-	var BlockOne_ = BlockOne();
+	//var BlockOne_ = BlockOne();
 	
-	var BlockTwo_ = BlockTwo();
+	//var BlockTwo_ = BlockTwo();
 	
-	var BlockTree_ = BlockTree();
-	
-	
-	DownloadBlock.appendChild(BlockOne_);
-	
-	DownloadBlock.appendChild(BlockTwo_);
-	
-	DownloadBlock.appendChild(BlockTree_);
+	//var BlockTree_ = BlockTree();
 	
 	
-	var BottomDesign_ = BottomDesign();
+	//DownloadBlock.appendChild(BlockOne_);
+	
+	//DownloadBlock.appendChild(BlockTwo_);
+	
+	//DownloadBlock.appendChild(BlockTree_);
 	
 	
-	DownloadBlock.appendChild(BottomDesign_);
+	//var BottomDesign_ = BottomDesign();
 	
 	
-	DisableScroll();
+	//DownloadBlock.appendChild(BottomDesign_);
+	
+	
+	//DisableScroll();
 	
 	}
 	

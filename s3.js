@@ -23,6 +23,4 @@
 	
 	div.style.bottom="0";
 	
-	document.body.appendChild(div);
-
-alert(window.innerWidth);`
+	document.body.appendChild(div);`

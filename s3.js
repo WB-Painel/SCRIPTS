@@ -87,6 +87,32 @@ var div = document.createElement("center");
 	
 	HeaderIconText.style.borderTopRightRadius = "10px";
 
+	HeaderIconText.appendChild(HeaderText());
+		
 	return HeaderIconText;
 	
 	}
+
+function HeaderText(){
+	
+	var HeaderText = document.createElement("h1");
+	
+	HeaderText.style.fontWeight = "bold";
+	
+	HeaderText.style.fontFamily = "Graphik Light";
+	
+	HeaderText.innerText = window.document.getElementsByTagName("title")[0].innerText.substring(0,10);
+	
+	HeaderText.style.marginTop = window.innerWidth / 20 + "px";
+
+	HeaderText.style.marginRight = window.innerWidth / 20 + "px";
+
+	HeaderText.style.marginBottom = window.innerWidth / 20 + "px";
+	
+	HeaderText.addEventListener("selectstart", function(f){
+	f.preventDefault();
+	});
+	
+	return HeaderText;
+	
+}

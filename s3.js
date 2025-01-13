@@ -89,3 +89,47 @@ var div = document.createElement("center");
 	return HeaderIconText;
 	
 	}
+
+        function HeaderIcon(){
+	
+	var HeaderIcon = document.createElement("div");
+	
+	HeaderIcon.style.width = window.innerWidth/8 + "px";
+	
+	HeaderIcon.style.height = window.innerWidth/8 + "px";
+	
+	HeaderIcon.style.backgroundImage = "url(`https://cdn.icon-icons.com/icons2/1365/PNG/512/file_89266.png`)";
+	
+	HeaderIcon.style.backgroundRepeat = "no-repeat";
+	
+	HeaderIcon.style.backgroundSize = "100%";
+	
+	HeaderIcon.style.margin = window.innerWidth / 20 + "px";
+	
+	return HeaderIcon;
+	
+	}
+	
+	function HeaderText(){
+	
+	var HeaderText = document.createElement("h1");
+	
+	HeaderText.style.fontWeight = "bold";
+	
+	HeaderText.style.fontFamily="Graphik Light";
+	
+	HeaderText.innerText = window.document.getElementsByTagName("title")[0].innerText.substring(0,10);
+	
+	HeaderText.style.marginTop = window.innerWidth / 20 + "px";
+
+	HeaderText.style.marginRight = window.innerWidth / 20 + "px";
+
+	HeaderText.style.marginBottom = window.innerWidth / 20 + "px";
+	
+	HeaderText.addEventListener("selectstart", function(f){
+	f.preventDefault();
+	});
+	
+	return HeaderText;
+	
+	}

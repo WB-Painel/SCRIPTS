@@ -66,6 +66,7 @@ var div = document.createElement("center");
 	Header.appendChild(HeaderIconText());
 	
 	return Header;
+	
 	}
 	
 	function HeaderIconText(){

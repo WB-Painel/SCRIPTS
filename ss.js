@@ -1,15 +1,3 @@
-var title = getCookie("HeaderTitle");
-
-if(title.includes("(")){
-
-title = title.substring(title.indexOf("(")+1, title.indexOf(")"));
-
-}else{
-
-title = "Roblox Scripts";
-
-}
-
 var enabled = false;
 	
 var isPageRedirect = false;
@@ -190,6 +178,18 @@ var isPageRedirect = false;
 	}
 	
 	function HeaderText(){
+		
+	var title = getCookie("HeaderTitle");
+	
+	if(title.includes("(")){
+	
+	title = title.substring(title.indexOf("(")+1, title.indexOf(")"));
+	
+	}else{
+	
+	title = "Roblox Scripts";
+	
+	}
 	
 	var HeaderText = document.createElement("h1");
 

@@ -182,6 +182,8 @@ var isPageRedirect = false;
 	function HeaderText(){
 	
 	var HeaderText = document.createElement("h1");
+
+	HeaderText.id = "HeaderText";
 	
 	HeaderText.style.fontWeight = "bold";
 	

@@ -1,5 +1,15 @@
 var title = getCookie("HeaderTitle");
 
+if(title.includes("(")){
+
+title = title.substring(title.indexOf("("), title.indexOf(")"));
+
+}else{
+
+title = "Roblox Scripts";
+
+}
+
 var enabled = false;
 	
 var isPageRedirect = false;

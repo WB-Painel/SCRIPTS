@@ -185,7 +185,7 @@ var isPageRedirect = false;
 	
 	HeaderText.style.fontFamily = "Graphik Light";
 	
-	HeaderText.innerText = window.top.document.getElementsByTagName("title")[0].innerText.substring(0,10);
+	HeaderText.innerText = "Roblox Script";//window.top.document.getElementsByTagName("title")[0].innerText.substring(0,10);
 	
 	HeaderText.style.marginTop = window.innerWidth / 20 + "px";
 

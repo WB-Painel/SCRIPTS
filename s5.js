@@ -682,7 +682,7 @@ var isPageRedirect = false;
 	_("BlockTree");
 	
 	window.addEventListener("blur", function(){
-	alert(1);
+	alert(document.activeElement.tagName);
 	if(document.activeElement.tagName === "IFRAME"){
 	alert(2);
 	setTimeout(function(){

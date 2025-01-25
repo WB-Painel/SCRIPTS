@@ -42,10 +42,6 @@ var isPageRedirect = false;
 	var HeaderNotify_ = HeaderNotify();
 	
 	DownloadBlock.appendChild(HeaderNotify_);
-
-	var Message_ = Message();
-
-	DownloadBlock.appendChild(Message_);
 	
 	initGoogleAds();
 	
@@ -58,36 +54,81 @@ var isPageRedirect = false;
 	var BlockTree_ = BlockTree();
 	
 	if(Cookie=="1"){
+
+	var Message_ = Message(1);
+
+	DownloadBlock.appendChild(Message_);
 	
 	DownloadBlock.appendChild(BlockOne_);
+
+	
+	var Message_ = Message(2);
+
+	DownloadBlock.appendChild(Message_);
 	
 	DownloadBlock.appendChild(BlockTwo_);
+
+	
+	var Message_ = Message(3);
+
+	DownloadBlock.appendChild(Message_);
 	
 	DownloadBlock.appendChild(BlockTree_);
+
 	
 	setCookie("GoogleAdBanner",2);
 	
 	}
 	
 	if(Cookie=="2"){
+
+	var Message_ = Message(1);
+
+	DownloadBlock.appendChild(Message_);
 	
 	DownloadBlock.appendChild(BlockTwo_);
+
+
+	var Message_ = Message(2);
+
+	DownloadBlock.appendChild(Message_);
 	
 	DownloadBlock.appendChild(BlockOne_);
+
+
+	var Message_ = Message(3);
+
+	DownloadBlock.appendChild(Message_);
 	
 	DownloadBlock.appendChild(BlockTree_);
+
 	
 	setCookie("GoogleAdBanner",3);
 	
 	}
 	
 	if(Cookie=="3"){
+
+	var Message_ = Message(1);
+
+	DownloadBlock.appendChild(Message_);
 	
 	DownloadBlock.appendChild(BlockTree_);
+
+
+	var Message_ = Message(2);
+
+	DownloadBlock.appendChild(Message_);
 	
 	DownloadBlock.appendChild(BlockTwo_);
+
+
+	var Message_ = Message(3);
+
+	DownloadBlock.appendChild(Message_);
 	
 	DownloadBlock.appendChild(BlockOne_);
+
 	
 	setCookie("GoogleAdBanner",1);
 	
@@ -101,12 +142,24 @@ var isPageRedirect = false;
 	
 	}
 
-        function Message(){
+        function Message(int){
 
+	var M;
+
+	if(int == 1){
+	M = "Empréstimos pessoais: solução financeira flexível para necessidades imediatas. Oferecem acesso rápido a recursos, com taxas e prazos variados. Planeje com cuidado para evitar dívidas.";
+	}
+	if(int == 2){
+	M = "Empréstimos pessoais: solução financeira rápida e flexível. Oferecem acesso a recursos para necessidades imediatas, com taxas e prazos variados, exigindo planejamento cuidadoso para evitar dívidas.";
+	}
+	if(int == 3){
+	M = "Empréstimos pessoais: solução financeira rápida e flexível para necessidades imediatas. Oferecem acesso a recursos com taxas e prazos variados, exigindo planejamento cuidadoso.";
+	}
+	
 	var Message = document.createElement("h1");
 
-	Message.innerText = "Empréstimos pessoais: solução financeira flexível para necessidades imediatas. Oferecem acesso rápido a recursos, com taxas e prazos variados. Planeje com cuidado para evitar dívidas.";
-
+	Message.innerText = M;
+	
 	Message.style.fontSize = "10px";
 	
 	return Message;

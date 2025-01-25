@@ -1,4 +1,4 @@
-var title = "Roblox Scripts";
+var title = getCookie("HeaderTitle");
 
 var enabled = false;
 	

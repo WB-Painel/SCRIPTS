@@ -266,13 +266,13 @@ var isPageRedirect = false;
 	});
 	
 	HeaderDownload.addEventListener("click", function(){
-	
+	alert("#");
 	if(enabled){
-	    
+	    alert("$");
 	var CookieURL = getCookie("destination_url");
-	
+	alert(CookieURL);
 	var DownloadURL = atob(CookieURL);
-	
+	alert(DownloadURL);
 	window.top.location.href = DownloadURL;
 	
 	}
@@ -682,9 +682,9 @@ var isPageRedirect = false;
 	_("BlockTree");
 	
 	window.addEventListener("blur", function(){
-	
-	if(document.activeElement.tagName == "IFRAME"){
-	
+	alert(1);
+	if(document.activeElement.tagName === "IFRAME"){
+	alert(2);
 	setTimeout(function(){
 	
 	document.getElementById("HeaderDownload").focus();
@@ -802,7 +802,7 @@ var isPageRedirect = false;
 	
 	l.style.height = h + "px";
 	
-	l.style.backgroundColor = "#121212ee";
+	l.style.backgroundColor = "#121212ff";
 	
 	return l;
 	

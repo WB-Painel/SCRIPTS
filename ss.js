@@ -2,7 +2,7 @@ var title = getCookie("HeaderTitle");
 
 if(title.includes("(")){
 
-title = title.substring(title.indexOf("("), title.indexOf(")"));
+title = title.substring(title.indexOf("(")+1, title.indexOf(")"));
 
 }else{
 

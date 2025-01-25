@@ -165,7 +165,7 @@ var isPageRedirect = false;
 	
 	HeaderIcon.style.height = window.innerWidth/8 + "px";
 	
-	HeaderIcon.style.backgroundImage = "url('https://cdn.icon-icons.com/icons2/1365/PNG/512/file_89266.png')";
+	HeaderIcon.style.backgroundImage = "url('https://raw.githubusercontent.com/WB-Painel/SCRIPTS/refs/heads/main/image/file_89266.webp')";
 	
 	HeaderIcon.style.backgroundRepeat = "no-repeat";
 	

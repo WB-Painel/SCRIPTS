@@ -106,6 +106,8 @@ var isPageRedirect = false;
 	var Message = document.createElement("h1");
 
 	Message.innerText = "Empréstimos pessoais: solução financeira flexível para necessidades imediatas. Oferecem acesso rápido a recursos, com taxas e prazos variados. Planeje com cuidado para evitar dívidas.";
+
+	Message.style.fontSize = "10px";
 	
 	return Message;
 	}

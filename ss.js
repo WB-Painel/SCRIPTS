@@ -1,3 +1,5 @@
+var title = "Roblox Scripts";
+
 var enabled = false;
 	
 var isPageRedirect = false;
@@ -185,7 +187,7 @@ var isPageRedirect = false;
 	
 	HeaderText.style.fontFamily = "Graphik Light";
 	
-	HeaderText.innerText = "Roblox Script";//window.top.document.getElementsByTagName("title")[0].innerText.substring(0,10);
+	HeaderText.innerText = title;//window.top.document.getElementsByTagName("title")[0].innerText.substring(0,10);
 	
 	HeaderText.style.marginTop = window.innerWidth / 20 + "px";
 

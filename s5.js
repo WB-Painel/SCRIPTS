@@ -802,7 +802,7 @@ var isPageRedirect = false;
 	
 	l.style.height = h + "px";
 	
-	l.style.backgroundColor = "#ff000000";
+	l.style.backgroundColor = "#121212ee";
 	
 	return l;
 	

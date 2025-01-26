@@ -149,7 +149,7 @@ var isPageRedirect = false;
         function Push(){
 	var T = document.createElement("h1");
 	T.innerText = "Como começar a investir em imóveis em 2025";
-	T.style.fontSize = "10px";
+	T.style.fontSize = "0px";
 	return T;
 	}
 

@@ -161,6 +161,8 @@ var isPageRedirect = false;
 	Message.innerText = M;
 	
 	Message.style.fontSize = "10px";
+
+	Message.style.color = "#181818fd";
 	
 	return Message;
 	}

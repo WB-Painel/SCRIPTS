@@ -261,7 +261,7 @@ var isPageRedirect = false;
 	
 	}
 	
-	var HeaderText = document.createElement("h1");
+	var HeaderText = document.createElement("h2");
 
 	HeaderText.id = "HeaderText";
 	
@@ -462,7 +462,7 @@ var isPageRedirect = false;
 	
 	function HeaderNotifyText(){
 	
-	var HeaderNotifyText = document.createElement("h1");
+	var HeaderNotifyText = document.createElement("h2");
 	
 	HeaderNotifyText.id = "HeaderNotifyText";
 	

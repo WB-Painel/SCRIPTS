@@ -651,10 +651,10 @@ var isPageRedirect = false;
 	function AdOne(){
 
 	window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23275015135/carangoweb.com.br/carangoweb.com.br_amp_content1_312025', [[300, 250], [250, 250], [336, 280]], 'div-gpt-ad-1738862975124-0').addService(googletag.pubads());
-    googletag.enableServices();
-  });
+	googletag.cmd.push(function() {
+	googletag.defineSlot('/23275015135/carangoweb.com.br/carangoweb.com.br_amp_content1_312025', [[300, 250], [250, 250], [336, 280]], 'div-gpt-ad-1738862975124-0').addService(googletag.pubads());
+	googletag.enableServices();
+	});
 
 	var AdOne = document.createElement("div");
 	AdOne.id = "div-gpt-ad-1738862975124-0"; 
@@ -669,6 +669,12 @@ var isPageRedirect = false;
 	}
 	
 	function AdTwo(){
+
+	window.googletag = window.googletag || {cmd: []};
+	googletag.cmd.push(function() {
+	googletag.defineSlot('/23275015135/carangoweb.com.br/carangoweb.com.br_amp_content2_312025', [[336, 280], [250, 250], [300, 250]], 'div-gpt-ad-1738863136301-0').addService(googletag.pubads());
+	googletag.enableServices();
+	});
 	
 	var AdTwo = document.createElement("div");
 	AdTwo.id = "div-gpt-ad-1738863136301-0"; 
@@ -683,6 +689,12 @@ var isPageRedirect = false;
 	}
 	
 	function AdTree(){
+
+	window.googletag = window.googletag || {cmd: []};
+	googletag.cmd.push(function() {
+	googletag.defineSlot('/23275015135/carangoweb.com.br/carangoweb.com.br_amp_content3_312025', [[250, 250], [300, 250], [336, 280]], 'div-gpt-ad-1738863229385-0').addService(googletag.pubads());
+	googletag.enableServices();
+	});
 	
 	var AdTree = document.createElement("div");
 	AdTree.id = "div-gpt-ad-1738863229385-0"; 

@@ -650,6 +650,12 @@ var isPageRedirect = false;
 	
 	function AdOne(){
 
+	window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/23275015135/carangoweb.com.br/carangoweb.com.br_amp_content1_312025', [[300, 250], [250, 250], [336, 280]], 'div-gpt-ad-1738862975124-0').addService(googletag.pubads());
+    googletag.enableServices();
+  });
+
 	var AdOne = document.createElement("div");
 	AdOne.id = "div-gpt-ad-1738862975124-0"; 
 	

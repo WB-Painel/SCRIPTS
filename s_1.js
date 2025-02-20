@@ -53,11 +53,9 @@ var isPageRedirect = false;
 
 	if(Cookie == "null"){
 
-	Cookie = getCookie("GoogleAdBanner");
+	Cookie = "1";
 	
 	}
-
-	alert(Cookie);
 	
 	var BlockOne_ = BlockOne();
 	
@@ -536,8 +534,6 @@ var isPageRedirect = false;
 	Cookie.indexOf("=")+1,Cookie.indexOf(";")
 	);
 
-	alert(Cookie);
-	
 	}else{
 	
 	setCookie(Name,1);

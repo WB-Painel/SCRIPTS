@@ -50,6 +50,8 @@ var isPageRedirect = false;
 	initGoogleAds();
 	
 	var Cookie = getCookie("GoogleAdBanner");
+
+	alert(Cookie);
 	
 	var BlockOne_ = BlockOne();
 	

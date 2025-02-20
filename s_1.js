@@ -535,6 +535,8 @@ var isPageRedirect = false;
 	setCookie(Name,1);
 	
 	Cookie = getCookie(Name);
+
+	return Cookie;
 	
 	}
 	

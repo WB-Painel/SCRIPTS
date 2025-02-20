@@ -781,7 +781,10 @@ var isPageRedirect = false;
 	
 	window.addEventListener("focus", function(){
 	setTimeout(function(){
-	if(!iOS()){
+	var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+	alert(isMobile);
+        if (isMobile) {
+	}else{
 	isPageRedirect = false;
 	}
 	},500);
@@ -921,16 +924,3 @@ var isPageRedirect = false;
 	return l;
 	
 	}
-
-function iOS() {
-  return [
-    'iPad Simulator',
-    'iPhone Simulator',
-    'iPod Simulator',
-    'iPad',
-    'iPhone',
-    'iPod'
-  ].includes(navigator.platform)
-  // iPad on iOS 13 detection
-  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
-}

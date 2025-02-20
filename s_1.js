@@ -51,6 +51,12 @@ var isPageRedirect = false;
 	
 	var Cookie = getCookie("GoogleAdBanner");
 
+	if(Cookie == "null"){
+
+	Cookie = getCookie("GoogleAdBanner");
+	
+	}
+
 	alert(Cookie);
 	
 	var BlockOne_ = BlockOne();

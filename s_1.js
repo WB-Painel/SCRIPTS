@@ -533,10 +533,8 @@ var isPageRedirect = false;
 	}else{
 	
 	setCookie(Name,1);
-	
-	Cookie = getCookie(Name);
 
-	return Cookie;
+	return "null";
 	
 	}
 	

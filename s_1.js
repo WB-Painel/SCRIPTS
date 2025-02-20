@@ -535,6 +535,8 @@ var isPageRedirect = false;
 	(
 	Cookie.indexOf("=")+1,Cookie.indexOf(";")
 	);
+
+	alert(Cookie);
 	
 	}else{
 	

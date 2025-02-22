@@ -530,6 +530,8 @@ var isPageRedirect = false;
 	(
 	Cookie.indexOf(Name),Cookie.length
 	);
+
+	alert("K:"+Cookie);
 	
 	Cookie = Cookie.substring
 	(

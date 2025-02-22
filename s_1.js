@@ -56,8 +56,6 @@ var isPageRedirect = false;
 	Cookie = "1";
 	
 	}
-
-	alert(Cookie);
 	
 	var BlockOne_ = BlockOne();
 	
@@ -542,8 +540,6 @@ var isPageRedirect = false;
 	Cookie.indexOf("=")+1,Cookie.indexOf(";")
 	);
 	}
-
-	alert("K:"+Cookie);
 
 	}else{
 	

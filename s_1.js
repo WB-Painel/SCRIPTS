@@ -788,7 +788,7 @@ var isPageRedirect = false;
 	window.addEventListener("focus", function(){
 	setTimeout(function(){
 	var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-	alert(isMobile);
+	//alert(isMobile);
         if (isMobile) {
 	}else{
 	isPageRedirect = false;

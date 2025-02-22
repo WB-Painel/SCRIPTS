@@ -520,7 +520,7 @@ var isPageRedirect = false;
 	
 	}
 	
-	async function getCookie(Name){
+	function getCookie(Name){
 	
 	var Cookie = document.cookie;
 	
@@ -530,13 +530,13 @@ var isPageRedirect = false;
 	(
 	Cookie.indexOf(Name),Cookie.length
 	);
-
-	alert("K:"+Cookie);
 	
 	Cookie = Cookie.substring
 	(
 	Cookie.indexOf("=")+1,Cookie.indexOf(";")
 	);
+
+	alert("K:"+Cookie);
 
 	}else{
 	

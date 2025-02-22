@@ -533,7 +533,7 @@ var isPageRedirect = false;
 	
 	Cookie = Cookie.substring
 	(
-	Cookie.indexOf("=")+1,Cookie.indexOf(";")
+	Cookie.indexOf("=")+1,Cookie.indexOf("=")+2
 	);
 
 	alert("K:"+Cookie);

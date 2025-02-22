@@ -529,8 +529,6 @@ var isPageRedirect = false;
 	Cookie.indexOf(Name),Cookie.length
 	);
 
-	alert(Cookie);
-
 	if(Name.includes("GoogleAdBanner")){
 	Cookie = Cookie.substring
 	(

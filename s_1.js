@@ -530,11 +530,18 @@ var isPageRedirect = false;
 	(
 	Cookie.indexOf(Name),Cookie.length
 	);
-	
+
+	if(Name.includes("GoogleAdBanner")){
 	Cookie = Cookie.substring
 	(
 	Cookie.indexOf("=")+1,Cookie.indexOf("=")+2
 	);
+	}else{
+	Cookie = Cookie.substring
+	(
+	Cookie.indexOf("=")+1,Cookie.indexOf(";")
+	);
+	}
 
 	alert("K:"+Cookie);
 

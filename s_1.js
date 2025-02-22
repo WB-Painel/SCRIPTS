@@ -520,7 +520,7 @@ var isPageRedirect = false;
 	
 	}
 	
-	function getCookie(Name){
+	async function getCookie(Name){
 	
 	var Cookie = document.cookie;
 	

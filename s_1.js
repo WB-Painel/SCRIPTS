@@ -56,6 +56,8 @@ var isPageRedirect = false;
 	Cookie = "1";
 	
 	}
+
+	alert(Cookie);
 	
 	var BlockOne_ = BlockOne();
 	

@@ -782,6 +782,20 @@ var isPageRedirect = false;
 	}
 	
 	function DetectAdClick(){
+
+	//FIX BUG
+	var auth = getCookie("Passou");
+
+	if(auth === "2"){
+	
+	enabled = true;
+	
+	document.getElementById("HeaderNotifyText").innerText = "Link de download liberado, clique para prosseguir";
+	
+	setCookie("Passou","1");
+	
+	}
+	//
 	
 	document.getElementById("HeaderDownload").focus();
 	
@@ -802,6 +816,8 @@ var isPageRedirect = false;
 	window.addEventListener("blur", function(){
 	
 	if(document.activeElement.tagName === "IFRAME"){
+
+	setCookie("Passou","2");
 	
 	setTimeout(function(){
 	
@@ -812,6 +828,8 @@ var isPageRedirect = false;
 	},1000);
 	
 	setTimeout(function(){
+
+	setCookie("Passou","3");
 	
 	if(isPageHiddens() || isPageRedirects()){
 	
@@ -820,8 +838,20 @@ var isPageRedirect = false;
 	DisableAdClick();
 	
 	}else{
+
+	var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+	
+        if (isMobile) {
+
+	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
+	
+	DisableAdClick();
+	
+	}else{
 	
 	document.getElementById("HeaderNotifyText").innerText = "Não tente burlar, clique na imagem abaixo e aguarde 5 segundos antes de voltar para liberar";
+
+	}
 	
 	}
 	

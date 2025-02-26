@@ -789,6 +789,8 @@ var isPageRedirect = false;
 	}
 	
 	function DetectAdClick(){
+
+	alert("@");
 	
 	document.getElementById("HeaderDownload").focus();
 	

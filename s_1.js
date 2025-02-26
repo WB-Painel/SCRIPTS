@@ -806,12 +806,12 @@ var isPageRedirect = false;
 	
 	window.addEventListener("focus", function(){
 	setTimeout(function(){
-	var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+	//var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 	//alert(isMobile);
-        if (isMobile) {
-	}else{
+        //if (isMobile) {
+	//}else{
 	isPageRedirect = false;
-	}
+	//}
 	},500);
 	});
 	

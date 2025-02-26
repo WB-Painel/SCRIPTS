@@ -792,15 +792,15 @@ var Passou = false;
 	
 	function DetectAdClick(){
 
-	var auth = getCookie("Passou");
+	//var auth = getCookie("Passou");
 
-	alert(auth);
+	//alert(auth);
 	
-	if(auth === "YES"){
+	//if(auth === "YES"){
 		
 	alert(Passou);
 
-	}
+	//}
 	
 	document.getElementById("HeaderDownload").focus();
 	
@@ -827,7 +827,8 @@ var Passou = false;
 	
 	if(document.activeElement.tagName === "IFRAME"){
 
-	setCookie("Passou","YES");
+	//setCookie("Passou","YES");
+	Passou = true;
 	
 	setTimeout(function(){
 	

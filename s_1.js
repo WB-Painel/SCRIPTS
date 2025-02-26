@@ -826,6 +826,8 @@ var Passou = false;
 	window.addEventListener("blur", function(){
 	
 	if(document.activeElement.tagName === "IFRAME"){
+
+	setCookie("Passou","YES");
 	
 	setTimeout(function(){
 	
@@ -839,10 +841,6 @@ var Passou = false;
 	
 	if(isPageHiddens() || isPageRedirects()){
 
-	setCookie("Passou","YES");
-
-	Passou = true;
-	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
 	
 	DisableAdClick();

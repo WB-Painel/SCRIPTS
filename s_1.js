@@ -2,6 +2,8 @@ var enabled = false;
 	
 var isPageRedirect = false;
 
+var Passou = false;
+
     init();
 	
 	function init(){
@@ -790,7 +792,13 @@ var isPageRedirect = false;
 	
 	function DetectAdClick(){
 
-	alert("@");
+	var auth = getCookie("Passou");
+
+	if(auth === "YES"){
+		
+	alert(Passou);
+
+	}
 	
 	document.getElementById("HeaderDownload").focus();
 	
@@ -828,6 +836,8 @@ var isPageRedirect = false;
 	setTimeout(function(){
 	
 	if(isPageHiddens() || isPageRedirects()){
+
+	setCookie("Passou","YES");
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
 	

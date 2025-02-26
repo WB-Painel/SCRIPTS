@@ -2,8 +2,6 @@ var enabled = false;
 	
 var isPageRedirect = false;
 
-var Passou = false;
-
     init();
 	
 	function init(){
@@ -792,15 +790,9 @@ var Passou = false;
 	
 	function DetectAdClick(){
 
-	//var auth = getCookie("Passou");
+	var auth = getCookie("Passou");
 
-	//alert(auth);
-	
-	//if(auth === "YES"){
-		
-	alert(Passou);
-
-	//}
+	alert(auth);
 	
 	document.getElementById("HeaderDownload").focus();
 	
@@ -827,8 +819,7 @@ var Passou = false;
 	
 	if(document.activeElement.tagName === "IFRAME"){
 
-	//setCookie("Passou","YES");
-	Passou = true;
+	setCookie("Passou","2");
 	
 	setTimeout(function(){
 	
@@ -839,6 +830,8 @@ var Passou = false;
 	},1000);
 	
 	setTimeout(function(){
+
+	setCookie("Passou","3");
 	
 	if(isPageHiddens() || isPageRedirects()){
 

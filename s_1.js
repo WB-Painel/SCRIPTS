@@ -794,7 +794,7 @@ var Passou = false;
 
 	var auth = getCookie("Passou");
 
-	alert(Passou);
+	alert(auth);
 	
 	if(auth === "YES"){
 		

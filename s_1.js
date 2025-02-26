@@ -792,7 +792,15 @@ var isPageRedirect = false;
 
 	var auth = getCookie("Passou");
 
-	alert(auth);
+	if(auth === "2"){
+	
+	enabled = true;
+	
+	document.getElementById("HeaderNotifyText").innerText = "Link de download liberado, clique para prosseguir";
+	
+	setCookie("Passou","1");
+	
+	}
 	
 	document.getElementById("HeaderDownload").focus();
 	

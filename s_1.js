@@ -848,8 +848,20 @@ var isPageRedirect = false;
 	DisableAdClick();
 	
 	}else{
+
+	var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+	
+        if (isMobile) {
+
+	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
+	
+	DisableAdClick();
+	
+	}else{
 	
 	document.getElementById("HeaderNotifyText").innerText = "Não tente burlar, clique na imagem abaixo e aguarde 5 segundos antes de voltar para liberar";
+	
+	}
 	
 	}
 	

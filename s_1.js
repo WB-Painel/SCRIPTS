@@ -838,6 +838,8 @@ var Passou = false;
 	if(isPageHiddens() || isPageRedirects()){
 
 	setCookie("Passou","YES");
+
+	Passou = true;
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
 	

@@ -268,8 +268,6 @@ var isPageRedirect = false;
 		
 	var title = getCookie("HeaderTitle");
 
-	alert(title);
-	
 	if(title.includes("(")){
 	
 	title = title.substring(title.indexOf("(")+1, title.indexOf(")"));

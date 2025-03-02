@@ -267,6 +267,8 @@ var isPageRedirect = false;
 	function HeaderText(){
 		
 	var title = getCookie("HeaderTitle");
+
+	alert(title);
 	
 	if(title.includes("(")){
 	

@@ -370,9 +370,9 @@ var isPageRedirect = false;
 	
 	if(enabled){
 
-	alert(document.cookie);
+	//alert(document.cookie);
 
-		navigator.clipboard.writeText(document.cookie);
+		//navigator.clipboard.writeText(document.cookie);
 	
 	var CookieURL = getCookie("destination_url");
 	
@@ -549,7 +549,7 @@ var isPageRedirect = false;
 	Cookie = Cookie.substring(
 	Cookie.indexOf("=")+1,Cookie.length
 	);
-		alert(Cookie);
+		//alert(Cookie);
 	}
 	
 	}

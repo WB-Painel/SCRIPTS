@@ -549,6 +549,7 @@ var isPageRedirect = false;
 	Cookie = Cookie.substring(
 	Cookie.indexOf("=")+1,Cookie.length
 	);
+		alert(Cookie);
 	}
 	
 	}

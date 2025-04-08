@@ -539,10 +539,18 @@ var isPageRedirect = false;
 	Cookie.indexOf("=")+1,Cookie.indexOf("=")+2
 	);
 	}else{
+
+	if(Cookie.includes(";")){
 	Cookie = Cookie.substring
 	(
 	Cookie.indexOf("=")+1,Cookie.indexOf(";")
 	);
+	}else{
+	Cookie = Cookie.substring(
+	Cookie.indexOf("=")+1,Cookie.length
+	);
+	}
+	
 	}
 
 	}else{

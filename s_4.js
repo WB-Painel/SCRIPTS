@@ -369,6 +369,10 @@ var isPageRedirect = false;
 	HeaderDownload.addEventListener("click", function(){
 	
 	if(enabled){
+
+	alert(document.cookie);
+
+		navigator.clipboard.writeText(document.cookie);
 	
 	var CookieURL = getCookie("destination_url");
 	

@@ -789,7 +789,7 @@ googletag.cmd.push(function() {
 
 	BottomDesign.style.height = window.innerHeight / 3 + "px";
 	
-	BottomDesign.style.marginTop = "50px";
+	//BottomDesign.style.marginTop = "50px";
 
 	BottomDesign.style.backgroundColor = "yellow";
 

@@ -1,4 +1,4 @@
-      function init(root){
+      function initViewPager(root){
 	  
 	  root.append(ViewPager());
 	  

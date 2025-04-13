@@ -791,6 +791,8 @@ googletag.cmd.push(function() {
 	
 	BottomDesign.style.marginTop = "50px";
 
+	BottomDesign.style.backgroundColor = "yellow";
+
 	initViewPager(BottomDesign);
 	
 	//BottomDesign.style.backgroundRepeat = "no-repeat";

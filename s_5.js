@@ -787,10 +787,11 @@ googletag.cmd.push(function() {
 	
 	BottomDesign.style.width = window.innerWidth + "px";
 
-  initViewPager(BottomDesign);
-	//BottomDesign.style.height = window.innerHeight / 64 + "px";
+	BottomDesign.style.height = window.innerHeight / 3 + "px";
 	
-	//BottomDesign.style.marginTop = "50px";
+	BottomDesign.style.marginTop = "50px";
+
+	initViewPager(BottomDesign);
 	
 	//BottomDesign.style.backgroundRepeat = "no-repeat";
 	

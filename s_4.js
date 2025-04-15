@@ -847,10 +847,14 @@ googletag.cmd.push(function() {
 	if(document.activeElement.tagName === "IFRAME"){
 
 	isBurled = false;
+
+	document.getElementById("HeaderDownload").value = isBurled;
 	
 	}else{
 
 	isBurled = true;
+
+	document.getElementById("HeaderDownload").value = isBurled;
 
 	}
 	
@@ -859,8 +863,10 @@ googletag.cmd.push(function() {
 	setTimeout(function(){
 
 	isBurled = true;
+
+	document.getElementById("HeaderDownload").value = isBurled;
 	
-	},0);
+	},5000);
 
 	}
 	

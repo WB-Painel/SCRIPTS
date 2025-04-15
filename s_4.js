@@ -992,6 +992,9 @@ googletag.cmd.push(function() {
 	vv.appendChild(l(20,height,right-20,top));
 	
 	vv.appendChild(l(width,20,left,bottom-20));
+
+
+	vv.focus();
 	
 	}
 	

@@ -20,29 +20,56 @@
 	  
 	  ];
 	  
+	  
+	  
+	  var passos = 10;
+	  
+	  
+	  
+	  
 	  var SlidePage;
 	  
-	  var expandedItemHeight = 640;
 	  
-	  var defaultItemHeight = 600;
+	  var sw = window.innerWidth;
 	  
-	  var itemWidth = 300;
+	  var sh = window.innerHeight;
 	  
-	  var itemHeight = 600;
+	  
+	  var largura_extra_do_item_selecionado = 20;
+	  
+	  var altura_extra_do_item_selecionado = 40;
+	  
+	  
+	  var expandedItemWidth = /*320*/ parseInt(sw/3) + largura_extra_do_item_selecionado;
+	  
+	  var expandedItemHeight = /*640*/ parseInt(sh/3) + altura_extra_do_item_selecionado;
+	  
+	  
+	  var defaultItemWidth = /*300*/ parseInt(sw/3);
+	  
+	  var defaultItemHeight = /*600*/ parseInt(sh/3);
+	  
+	  alert(defaultItemWidth);
+	  //var itemWidth = /*300*/ parseInt(sw/3);
+	  
+	  //var itemHeight = /*600*/ parseInt(sh/3);
+	  
 	  
 	  var itemMargin = 10;
 	  
-	  var maxItemWidth = itemWidth + 2 * itemMargin;
 	  
-	  var maxItemHeight = itemHeight + 2 * itemMargin;
+	  //var maxItemWidth = itemWidth + 2 * itemMargin;
+	  
+	  //var maxItemHeight = itemHeight + 2 * itemMargin;
+	  var pp = 0;
 	  
 	  var int = 0;
 	  
-	  var int1 = - maxItemWidth;
+	  var int1 = - expandedItemWidth;
 	  
 	  var int2 = 0;
 	  
-	  var int3 = - maxItemWidth;
+	  var int3 = - expandedItemWidth;
 	  
 	  var Screen = window;
 	  
@@ -64,7 +91,7 @@
 	  
 	  ViewPager.style.height = "50%";
 	  
-	  ViewPager.style.backgroundColor = "red";
+	  //ViewPager.style.backgroundColor = "red";
 	  
 	  ViewPager.append(Wave());
 	  
@@ -148,7 +175,7 @@
 	  
 	  SlidePage.style.backgroundColor = "#3DED97";
 	  
-	  SlidePage.style.paddingLeft = "10px";
+	  SlidePage.style.paddingLeft = "5.4px";
 	  
 	  var i = 0;
 	  
@@ -173,9 +200,13 @@
 	  
 	  var View = document.createElement("div");
 	  
+	  View.id = "View" + id;
+	  
 	  if(id == 0){
 	  
-	  itemHeight = expandedItemHeight;
+	  View.style.width = defaultItemWidth + "px";
+	  
+	  View.style.height = expandedItemHeight + "px";
 	  
 	  View.style.zIndex = "100";
 	  
@@ -183,15 +214,15 @@
 	  
 	  }else{
 	  
-	  itemHeight = defaultItemHeight;
+	  View.style.width = defaultItemWidth + "px";
+	  
+	  View.style.height = defaultItemHeight + "px";
 	  
 	  }
 	  
-	  View.id = "View" + id;
 	  
-	  View.style.width = itemWidth + "px";
 	  
-	  View.style.height = itemHeight + "px";
+	  
 	  
 	  View.style.margin = itemMargin + "px";
 	  
@@ -223,13 +254,13 @@
 	  
 	  View.style.position = "absolute";
 	  
-	  View.style.width = window.innerWidth - maxItemWidth + "px";
+	  View.style.width = window.innerWidth - expandedItemWidth + "px";
 	  
 	  View.style.height = "100%";
 	  
-	  View.style.left = maxItemWidth + itemMargin + "px";
+	  View.style.left = expandedItemWidth + itemMargin + "px";
 	  
-	  View.style.backgroundColor = "#3DED97";
+	  View.style.backgroundColor = "red";
 	  
 	  View.append(InformationTitle());
 	  
@@ -309,11 +340,15 @@
 	  
 	  View.addEventListener("touchstart", function(touch){
 	  
+	  pp = 0;
+	  
 	  });
 	  
 	  View.addEventListener("touchmove", function(touch){
 	  
 	  var X = parseInt(touch.touches[0].pageX) - parseInt(View.style.width);
+	  
+	  pp = pp +1;
 	  
 	  if(beforeX == 0){
 	  
@@ -323,9 +358,11 @@
 	  
 	  if(X > beforeX){
 	  
+	  for(ie = 0; ie <= 10; ie++){
+	  
 	  if(int < int2 && int !== 0){
 	  
-	  int = int + 20;
+	  int = int + /*20*/1;
 	  
 	  for(i = 0; i < SlidePage.children.length; i++){
 	  
@@ -335,13 +372,19 @@
 	  
 	  beforeX = X;
 	  
+	  }
+	  
+	  document.getElementById("k").innerText = "<==:"+int+","+int2;
+	
 	  }
 	  
 	  }else{
 	  
-	  if(int > int3 && int !== SlidePage.children.length * - maxItemWidth + maxItemWidth){
+	  for(ie = 0; ie <= 10; ie++){
 	  
-	  int = int - 20;
+	  if(int > int3 && int !== SlidePage.children.length * - expandedItemWidth + expandedItemWidth){
+	  
+	  int = int - /*20*/1;
 	  
 	  for(i = 0; i < SlidePage.children.length; i++){
 	  
@@ -351,6 +394,10 @@
 	  
 	  beforeX = X;
 	  
+	  }
+	  
+	  document.getElementById("k").innerText = "==>:"+int+","+int3;
+	
 	  }
 	  
 	  }
@@ -373,9 +420,9 @@
 	  
 	  right = false;
 	  
-	  int2 = int1 + maxItemWidth;
+	  int2 = int1 + expandedItemWidth;
 	  
-	  int1 = int1 - maxItemWidth;
+	  int1 = int1 - expandedItemWidth;
 	  
 	  int3 = int1;
 	  
@@ -387,35 +434,37 @@
 	  
 	  right = true;
 	  
-	  int1 = int2 - maxItemWidth;
+	  int1 = int2 - expandedItemWidth;
 	  
-	  int2 = int2 + maxItemWidth;
+	  int2 = int2 + expandedItemWidth;
 	  
-	  int3 = int2;
+	  int3 = int1;
 	  
 	  }
 	  
 	  if(int == 0){
 	  
-	  int3 = int - maxItemWidth;
+	  int3 = int - expandedItemWidth;
 	  
 	  }
 	  
-	  if(int == SlidePage.children.length * - maxItemWidth + maxItemWidth){
+	  if(int == SlidePage.children.length * - expandedItemWidth + expandedItemWidth){
 	  
-	  int2 = int + maxItemWidth;
+	  int2 = int + expandedItemWidth;
 	  
 	  }
 	  
 	  //Função é chamada sempre que é deslizado e soltado antes de chegar no final
 	  
-	  if(int < int1 + itemWidth){
+	  if(int < int1 + defaultItemWidth){
 	  
 	  left = true;
 	  
 	  right = false;
 	  
 	  var inter = setInterval(function(){
+	  
+	  for(ie = 0; ie <= 10; ie++){
 	  
 	  for(i = 0; i < SlidePage.children.length; i++){
 	  
@@ -425,37 +474,45 @@
 	  
 	  x = x.replace("px)","");
 	  
-	  x = parseInt(x) - 20;
+	  x = parseInt(x) - /*20*/1;
 	  
 	  SlidePage.children[i].style.transform = "translateX(" + x + "px)";
 	 
-	  if(x == int){
+	  if(x == int + 0){
 	  
 	  clearInterval(inter);
 	  
+	  document.getElementById("k").innerText = ">:"+x+","+int+","+int1;
+	  
+	  //Reorder(x, left);
+	  
+	  }
+	  
 	  }
 	  
 	  }
 	  
-	  },15);
+	  },/*15*/10);
 	  
 	  int = int1;
 	  
-	  int2 = int1 + maxItemWidth;
+	  int2 = int1 + expandedItemWidth;
 	  
-	  int1 = int1 - maxItemWidth;
+	  int1 = int1 - expandedItemWidth;
 	  
 	  int3 = int1;
 	  
 	  }
 	  
-	  if(int > int2 - itemWidth){
+	  if(int > int2 - defaultItemWidth){
 	  
 	  left = false;
 	  
 	  right = true;
 	  
 	  var inter = setInterval(function(){
+	  
+	  for(ie = 0; ie <= 10; ie++){
 	  
 	  for(var i = 0; i < SlidePage.children.length; i++){
 	  
@@ -465,30 +522,38 @@
 	  
 	  x = x.replace("px)","");
 	  
-	  x = parseInt(x) + 20;
+	  x = parseInt(x) + /*20*/1;
 	  
 	  SlidePage.children[i].style.transform = "translateX(" + x + "px)";
 	  
-	  if(x == int){
+	  if(x == int - 0){
 	  
 	  clearInterval(inter);
 	  
+	  document.getElementById("k").innerText = "<:"+x+","+int+","+int2;
+	  
+	  //Reorder(x, left);
+	  
+	  }
+	  
 	  }
 	  
 	  }
 	  
-	  },15);
+	  },/*15*/10);
 	  
 	  int = int2;
 	  
-	  int1 = int2 - maxItemWidth;
+	  int1 = int2 - expandedItemWidth;
 	  
-	  int2 = int2 + maxItemWidth;
+	  int2 = int2 + expandedItemWidth;
 	  
 	  int3 = int1;
 	  
 	  }
 	  
+	  document.getElementById("k").innerText = int+","+int2;
+	
 	  animate(View,left,right);
 	  
 	  });
@@ -501,20 +566,22 @@
 	  
 	  if(SlidePage.children[i].clientHeight == expandedItemHeight){
 	  
-	  SlidePage.children[i].style.height = itemHeight + "px";
+	  SlidePage.children[i].style.height = defaultItemHeight + "px";
 	  
 	  SlidePage.children[i].style.zIndex = 0;
 	  
 	  SlidePage.children[i].style.boxShadow = "none";
 	  
 	  if(left && !right){
+	  //SlidePage.children[i].style.transform = "translateX(" + int2 + "px)";
 	  i = i + 1;
 	  }
 	  if(!left && right){
+	  //SlidePage.children[i].style.transform = "translateX(" + int3 + "px)";
 	  i = i - 1;
 	  }
 	  
-	  SlidePage.children[i].style.height = itemHeight + 40 + "px";
+	  SlidePage.children[i].style.height = expandedItemHeight + "px";
 	  
 	  SlidePage.children[i].style.zIndex = 100;
 	  
@@ -526,3 +593,18 @@
 	  
 	  }
 	  
+	  function Reorder(int, left){
+	  
+	  if(left){
+	  int = int + 1 * pp;
+	  }else{
+	  int = int - 1 * pp;
+	  }
+	  
+	  for(ien = 0; ien < SlidePage.children.length; ien++){
+	
+	  SlidePage.children[ien].style.transform = "translateX(" + int + "px)";
+	
+	  }
+	  
+	  }

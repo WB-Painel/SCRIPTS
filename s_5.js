@@ -795,12 +795,12 @@ googletag.cmd.push(function() {
 
 		//BottomDesign.style.opacity = "0.5";
 
-		BottomDesign.style.display = "block";
+		//BottomDesign.style.display = "block";
 
-		BottomDesign.style.justifyContent = "center";
+		//BottomDesign.style.justifyContent = "center";
 
-		BottomDesign.style.alignItems = "center";
-alert("*");
+		//BottomDesign.style.alignItems = "center";
+//alert("*");
 	initViewPager(BottomDesign);
 	
 	//BottomDesign.style.backgroundRepeat = "no-repeat";

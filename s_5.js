@@ -797,7 +797,7 @@ googletag.cmd.push(function() {
 
 		BottomDesign.style.display = "block";
 
-		BottonDesign.style.justifyContent = "center";
+		BottomDesign.style.justifyContent = "center";
 
 		BottomDesign.style.alignItems = "center";
 alert("*");

@@ -791,9 +791,9 @@ googletag.cmd.push(function() {
 	
 	//BottomDesign.style.marginTop = "50px";
 
-	BottomDesign.style.backgroundColor = "green";
+	//BottomDesign.style.backgroundColor = "green";
 
-		BottomDesign.style.opacity = "0.5";
+		//BottomDesign.style.opacity = "0.5";
 
 		BottomDesign.style.display = "block";
 

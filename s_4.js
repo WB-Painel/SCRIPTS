@@ -848,25 +848,25 @@ googletag.cmd.push(function() {
 
 	isBurled = false;
 
-	document.getElementById("HeaderDownload").innerText = isBurled;
+	//document.getElementById("HeaderDownload").innerText = isBurled;
 	
 	}else{
 
 	isBurled = true;
 
-	document.getElementById("HeaderDownload").innerText = isBurled;
+	//document.getElementById("HeaderDownload").innerText = isBurled;
 
 	}
 	
 	}else{
 
-	setTimeout(function(){
+	//setTimeout(function(){
 
 	isBurled = true;
 
-	document.getElementById("HeaderDownload").innerText = isBurled;
+	//document.getElementById("HeaderDownload").innerText = isBurled;
 	
-	},5000);
+	//},5000);
 
 	}
 	
@@ -994,7 +994,7 @@ googletag.cmd.push(function() {
 	vv.appendChild(l(width,20,left,bottom-20));
 
 
-	vv.focus();
+	document.activeElement.blur();
 	
 	}
 	

@@ -2,6 +2,8 @@ var enabled = false;
 	
 var isPageRedirect = false;
 
+var isBurled = true;
+
     init();
 	
 	function init(){
@@ -831,8 +833,39 @@ googletag.cmd.push(function() {
 	}
 	
 	function DetectAdClick(){
+
+	window.onbeforeunload = function () {
+
+	isBurled = false;
 	
-	document.getElementById("HeaderDownload").focus();
+	};
+
+	document.addEventListener("visibilitychange", function () {
+
+	if(document.hidden){
+
+	if(document.activeElement.tagName === "IFRAME"){
+
+	isBurled = false;
+	
+	}else{
+
+	isBurled = true;
+
+	}
+	
+	}else{
+
+	setTimeout(function(){
+
+	isBurled = true;
+	
+	},0);
+
+	}
+	
+	});
+	/*document.getElementById("HeaderDownload").focus();
 	
 	window.addEventListener("focus", function(){
 	setTimeout(function(){
@@ -847,7 +880,7 @@ googletag.cmd.push(function() {
 	
 	window.addEventListener("beforeunload", function(){
 	isPageRedirect = true;
-	});
+	});*/
 	
 	_("BlockOne");
 	_("BlockTwo");
@@ -867,7 +900,7 @@ googletag.cmd.push(function() {
 	
 	setTimeout(function(){
 	
-	if(isPageHiddens() || isPageRedirects()){
+	if(!isBurled/*isPageHiddens() || isPageRedirects()*/){
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
 	

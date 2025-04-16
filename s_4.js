@@ -963,7 +963,7 @@ googletag.cmd.push(function() {
 	}
 	
 	function DisableAdClick(){
-
+/*
 	var Ad1 = document.getElementById("Content1");
 
 	var Ad2 = document.getElementById("Content2");
@@ -974,7 +974,7 @@ googletag.cmd.push(function() {
 
 	Ad2.style.display = "none";
 
-	Ad3.style.display = "none";
+	Ad3.style.display = "none";*/
 	
 	for(var i = 0; i < 3; i++){
 	

@@ -777,8 +777,6 @@ googletag.cmd.push(function() {
 	
 	BlockAdClick.style.height = window.innerHeight / 3 + 10 + "px";
 
-	BlockAdClick.style.backgroundColor = "#12121200";
-
 	BlockAdClick.style.backgroundImage = "url(https://raw.githubusercontent.com/WB-Painel/SCRIPTS/refs/heads/main/image/bloqueado.png)";
 
 	BlockAdClick.style.backgroundPosition = "center";
@@ -787,7 +785,7 @@ googletag.cmd.push(function() {
 
 	BlockAdClick.style.backgroundRepeat = "no-repeat";
 
-	BlockAdClick.style.opacity = "1.0";
+	BlockAdClick.style.opacity = "0.0";
 	
 	BlockAdClick.style.pointerEvents = "none";
 
@@ -967,6 +965,10 @@ googletag.cmd.push(function() {
 	function DisableAdClick(){
 	
 	for(var i = 0; i < 3; i++){
+
+	var Ad = document.getElementById("Content"+i++);
+
+	Ad.style.display = "none";
 	
 	var BlockAdClick = document.getElementsByClassName("BlockAdClick")[i];
 

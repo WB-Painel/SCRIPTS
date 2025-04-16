@@ -895,12 +895,12 @@ googletag.cmd.push(function() {
 	window.addEventListener("blur", function(){
 	
 	if(document.activeElement.tagName === "IFRAME"){
+
+	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
 	
 	setTimeout(function(){
 	
 	document.getElementById("HeaderDownload").focus();
-	
-	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
 	
 	},1000);
 	

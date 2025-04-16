@@ -1077,8 +1077,8 @@ function Dot(View){
     this.obj.style.position = "absolute";
     this.obj.style.left = window.innerWidth / 12 + this.x + "px"; 
     this.obj.style.top = this.y + "px"; 
-    this.obj.style.width =  "20px";
-    this.obj.style.height = "20px";
+    this.obj.style.width =  "3px";
+    this.obj.style.height = "3px";
     this.obj.style.backgroundColor = "#121212ff";
     this.obj.style.zIndex = "999999";
 

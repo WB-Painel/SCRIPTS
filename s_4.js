@@ -774,6 +774,12 @@ googletag.cmd.push(function() {
 	BlockAdClick.style.width = window.innerWidth + "px";
 	
 	BlockAdClick.style.height = window.innerHeight / 3 + 10 + "px";
+
+	BlockAdClick.style.backgroundColor = "#121212ff";
+
+	BlockAdClick.style.backgroundImage = "url(https://raw.githubusercontent.com/WB-Painel/SCRIPTS/refs/heads/main/image/bloqueado.png)";
+
+	BlockAdClick.style.opacity = "0.0";
 	
 	BlockAdClick.style.pointerEvents = "none";
 	
@@ -918,7 +924,7 @@ googletag.cmd.push(function() {
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
 	
-	//DisableAdClick();
+	DisableAdClick();
 	
 	}else{
 	
@@ -941,10 +947,10 @@ googletag.cmd.push(function() {
 	for(var i = 0; i < 3; i++){
 	
 	var BlockAdClick = document.getElementsByClassName("BlockAdClick")[i];
+
+	BlockAdClick.style.opacity = "1.0";
 	
-	BlockAdClick.style.pointerEvents = "auto";
-	
-	BlockAdClick.style.backgroundColor = "#ffffff00";
+	//BlockAdClick.style.pointerEvents = "auto";
 	
 	}
 	

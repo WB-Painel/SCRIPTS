@@ -852,7 +852,7 @@ googletag.cmd.push(function() {
 
 	isBurled = true;
 
-	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "C";
+	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "C" + document.activeElement;
 
 	}
 	

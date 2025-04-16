@@ -1068,19 +1068,19 @@ function Dot(View){
     this.x = window.innerWidth * Math.random();
     this.y = window.innerHeight/3 * Math.random();
 
-    this.speed = Math.floor(Math.random() * 20) + 2;
+    this.speed = 10/*Math.floor(Math.random() * 20) + 2*/;
 
 	//alert(this.x+","+this.y+","+this.speed+","+View.offsetWidth+","+View.offsetHeight+","+View.clientWidth+","+View.clientHeight);
 
     this.obj = document.createElement("div");
     this.obj.classList.add("dot");
     this.obj.style.position = "absolute";
+    this.obj.style.width =  "10px";
+    this.obj.style.height = "10px";
     this.obj.style.left = window.innerWidth / 12 + this.x + "px"; 
     this.obj.style.top = this.y + "px"; 
-    this.obj.style.width =  "9px";
-    this.obj.style.height = "9px";
     this.obj.style.backgroundColor = "#121212ff";
-    this.obj.style.zIndex = "999999";
+    this.obj.style.pointerEvents = "none";
 
     View.append(this.obj);
 

@@ -963,6 +963,10 @@ googletag.cmd.push(function() {
 	}
 	
 	function DisableAdClick(){
+
+	var AdOne = document.getElementById("Content1");
+
+	AdOne.style.opacity = "0.5";
 /*
 	var Ad1 = document.getElementById("Content1");
 

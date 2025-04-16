@@ -860,9 +860,9 @@ googletag.cmd.push(function() {
 	
 	var isBurled = true;
 
-	setInterval(function(){
-	alert(document.activeElement.tagName);
-	},2000);
+	//setInterval(function(){
+	//alert(document.activeElement.tagName);
+	//},2000);
 		
 	document.addEventListener("visibilitychange", function () {
 

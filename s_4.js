@@ -896,11 +896,11 @@ googletag.cmd.push(function() {
 
 	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
 	
-	/*setTimeout(function(){
+	setTimeout(function(){
 	
 	document.getElementById("HeaderDownload").focus();
 	
-	},1000);*/
+	},1000);
 	
 	setTimeout(function(){
 	

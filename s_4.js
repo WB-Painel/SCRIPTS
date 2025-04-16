@@ -880,7 +880,7 @@ googletag.cmd.push(function() {
 	
 	window.addEventListener("beforeunload", function(){
 	
-	isBurled = false;
+	isPageRedirect = true;
 
 	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + isBurled;
 	
@@ -904,7 +904,7 @@ googletag.cmd.push(function() {
 	
 	setTimeout(function(){
 	
-	if(!isBurled){
+	if(isPageRedirect || !isBurled){
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
 	

@@ -926,6 +926,8 @@ googletag.cmd.push(function() {
 	_("BlockTree");
 	
 	window.addEventListener("blur", function(){
+
+	alert(document.activeElement.tagName);
 	
 	if(document.activeElement.tagName === "IFRAME"){
 

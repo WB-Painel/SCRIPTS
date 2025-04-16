@@ -927,9 +927,9 @@ googletag.cmd.push(function() {
 	_("BlockTwo");
 	_("BlockTree");
 	
-	window.addEventListener("blur", function(){
+	document.addEventListener("blur", function(){
 
-	alert(document.activeElement.tagName);
+	//alert(document.activeElement.tagName);
 	
 	if(document.activeElement.tagName === "IFRAME"){
 

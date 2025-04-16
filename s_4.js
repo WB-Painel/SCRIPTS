@@ -2,7 +2,7 @@ var enabled = false;
 	
 var isPageRedirect = false;
 
-var isBurled = true;
+var isBurled = false;
 
     init();
 	
@@ -895,14 +895,14 @@ googletag.cmd.push(function() {
 	window.addEventListener("blur", function(){
 	
 	if(document.activeElement.tagName === "IFRAME"){
-
+isBurled = true;
 	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
 	
 	setTimeout(function(){
 	
 	document.getElementById("HeaderDownload").focus();
 	
-	},1000);
+	},2500);
 	
 	setTimeout(function(){
 	document.getElementById("HeaderDownload").innerText = isBurled;

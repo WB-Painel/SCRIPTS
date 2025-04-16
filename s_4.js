@@ -915,7 +915,9 @@ function foco(){
 
 if(document.activeElement.tagName === "IFRAME"){
 
-alert("1");
+var e = new Event("focusin");
+
+dispatchEvent(e);
 
 cancelAnimationFrame(raf);
 

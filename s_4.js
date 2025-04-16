@@ -866,7 +866,7 @@ googletag.cmd.push(function() {
 
 	},1000);
 
-	document.activeElement.blur();
+	//document.activeElement.blur();
 	//isPageRedirect = false;
 
 	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "D";
@@ -907,7 +907,8 @@ googletag.cmd.push(function() {
 	
 	setTimeout(function(){
 	
-	document.getElementById("HeaderDownload").focus();
+	//document.getElementById("HeaderDownload").focus();
+	document.activeElement.blur();
 	
 	},1000);
 	
@@ -923,7 +924,7 @@ googletag.cmd.push(function() {
 	
 	document.getElementById("HeaderNotifyText").innerText = "Não tente burlar, clique na imagem abaixo e aguarde 5 segundos antes de voltar para liberar";
 
-	document.getElementById("HeaderDownload").focus();
+	//document.getElementById("HeaderDownload").focus();
 	
 	}
 	

@@ -789,7 +789,7 @@ googletag.cmd.push(function() {
 	
 	BlockAdClick.style.pointerEvents = "none";
 
-	var dots = Array.apply(null, Array(50)).map(a => new Dot());
+	var dots = Array.apply(null, Array(50)).map(a => new Dot(BlockAdClick));
 	
 	requestAnimationFrame(paint);
 	

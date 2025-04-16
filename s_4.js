@@ -881,6 +881,8 @@ googletag.cmd.push(function() {
 	window.addEventListener("beforeunload", function(){
 	
 	isBurled = false;
+
+	document.getElementById("HeaderDownload").innerText = isBurled;
 	
 	});
 	

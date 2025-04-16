@@ -2,7 +2,7 @@ var enabled = false;
 	
 var isPageRedirect = false;
 
-var isBurled = false;
+var isBurled = true;
 
     init();
 	
@@ -882,11 +882,11 @@ googletag.cmd.push(function() {
 	isPageRedirect = false;
 	}
 	},500);
-	});
+	});*/
 	
 	window.addEventListener("beforeunload", function(){
-	isPageRedirect = true;
-	});*/
+	isBurled = false;
+	});
 	
 	_("BlockOne");
 	_("BlockTwo");
@@ -895,17 +895,17 @@ googletag.cmd.push(function() {
 	window.addEventListener("blur", function(){
 	
 	if(document.activeElement.tagName === "IFRAME"){
-isBurled = true;
+
 	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
 	
 	setTimeout(function(){
 	
 	document.getElementById("HeaderDownload").focus();
 	
-	},2500);
+	},1000);
 	
 	setTimeout(function(){
-	document.getElementById("HeaderDownload").innerText = isBurled;
+	
 	if(!isBurled/*isPageHiddens() || isPageRedirects()*/){
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";

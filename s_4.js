@@ -905,7 +905,7 @@ googletag.cmd.push(function() {
 	},1000);
 	
 	setTimeout(function(){
-	
+	document.getElementById("HeaderDownload").innerText = isBurled;
 	if(!isBurled/*isPageHiddens() || isPageRedirects()*/){
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";

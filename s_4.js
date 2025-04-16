@@ -1051,19 +1051,20 @@ googletag.cmd.push(function() {
 //New
 function Dot(View){
 
-    this.y = View.offsetHeight * Math.random();
-    this.x = View.offsetWidth * Math.random();
+    this.x = window.innerWidth * Math.random();
+    this.y = window.innerHeight/3 * Math.random();
+
     this.speed = Math.floor(Math.random() * 20) + 2;
 
-	alert(this.x+","+this.y+","+this.speed+","+View.offsetWidth+","+View.offsetHeight+","+View.clientWidth+","+View.clientHeight);
+	//alert(this.x+","+this.y+","+this.speed+","+View.offsetWidth+","+View.offsetHeight+","+View.clientWidth+","+View.clientHeight);
 
     this.obj = document.createElement("div");
     this.obj.classList.add("dot");
     this.obj.style.position = "absolute";
-    this.obj.style.top = this.y + "px"; 
     this.obj.style.left = this.x + "px"; 
-    this.obj.style.height =  "20px";
-    this.obj.style.width = "20px";
+    this.obj.style.top = this.y + "px"; 
+    this.obj.style.width =  "20px";
+    this.obj.style.height = "20px";
     this.obj.style.backgroundColor = "red";
     this.obj.style.zIndex = "999999";
 

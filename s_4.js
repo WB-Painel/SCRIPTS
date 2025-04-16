@@ -860,9 +860,9 @@ googletag.cmd.push(function() {
 	
 	var isBurled = true;
 
-	setInterval(function(){
-	alert(document.activeElement.tagName);
-	},5000);
+	//setInterval(function(){
+	//alert(document.activeElement.tagName);
+	//},5000);
 		
 	document.addEventListener("visibilitychange", function () {
 
@@ -929,8 +929,6 @@ googletag.cmd.push(function() {
 	
 	document.addEventListener("focusin", function(){
 
-	alert(document.activeElement.tagName);
-	
 	if(document.activeElement.tagName === "IFRAME"){
 
 	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";

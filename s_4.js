@@ -789,7 +789,7 @@ googletag.cmd.push(function() {
 	
 	BlockAdClick.style.pointerEvents = "none";
 
-	var dots = Array.apply(null, Array(50)).map(a => new Dot(BlockAdClick));
+	var dots = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
 	
 	requestAnimationFrame(paint);
 	
@@ -1054,6 +1054,8 @@ function Dot(View){
     this.y = View.offsetHeight * Math.random();
     this.x = View.offsetWidth * Math.random();
     this.speed = Math.floor(Math.random() * 20) + 2;
+
+	alert(this.x+","+this.y+","+this.speed+","+View.offsetWidth+","+View.offsetHeight+","+View.clientWidth+","+View.clientHeight);
 
     this.obj = document.createElement("div");
     this.obj.classList.add("dot");

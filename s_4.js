@@ -858,7 +858,13 @@ googletag.cmd.push(function() {
 	
 	}else{
 
+	setTimeout(function(){
+	
 	isBurled = true;
+
+	isPageRedirect = false;
+
+	},1000);
 
 	document.activeElement.blur();
 	//isPageRedirect = false;

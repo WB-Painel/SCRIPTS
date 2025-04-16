@@ -1102,7 +1102,19 @@ function paint() {
 
 requestAnimationFrame(paint);
 
-for (dot of dots) {
+for (dot of dots1) {
+
+dot.move();
+
+}
+
+for (dot of dots2) {
+
+dot.move();
+
+}
+
+for (dot of dots3) {
 
 dot.move();
 

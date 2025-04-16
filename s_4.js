@@ -927,7 +927,7 @@ googletag.cmd.push(function() {
 	_("BlockTwo");
 	_("BlockTree");
 	
-	document.addEventListener("blur", function(){
+	document.addEventListener("focusin", function(){
 
 	alert(document.activeElement.tagName);
 	

@@ -793,14 +793,16 @@ googletag.cmd.push(function() {
 
 	if(!dots1){
 	dots1 = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
-	}
+	}else{
 
 	if(!dots2){
 	dots2 = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
-	}
+	}else{
 
 	if(!dots3){
 	dots3 = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
+	}
+	}
 	}
 
 	requestAnimationFrame(paint);

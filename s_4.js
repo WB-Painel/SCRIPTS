@@ -910,7 +910,7 @@ googletag.cmd.push(function() {
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
 	
-	DisableAdClick();
+	//DisableAdClick();
 	
 	}else{
 	

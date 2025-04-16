@@ -781,7 +781,7 @@ googletag.cmd.push(function() {
 
 	BlockAdClick.style.backgroundPosition = "center";
 	
-	BlockAdClick.style.backgroundSize = "100%";
+	BlockAdClick.style.backgroundSize = "50% 50%";
 
 	BlockAdClick.style.backgroundRepeat = "no-repeat";
 

@@ -860,7 +860,7 @@ googletag.cmd.push(function() {
 	
 	var isBurled = true;
 
-	//document.getElementById("HeaderDownload").innerText = "";
+	document.getElementById("HeaderDownload").click();
 		
 	document.addEventListener("visibilitychange", function () {
 

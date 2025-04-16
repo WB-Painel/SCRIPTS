@@ -878,7 +878,7 @@ googletag.cmd.push(function() {
 
 	isBurled = true;
 
-	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "C" + document.activeElement;
+	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "C" + document.activeElement;
 
 	}
 	
@@ -939,7 +939,7 @@ googletag.cmd.push(function() {
 	},1000);
 	
 	setTimeout(function(){
-	document.getElementById("HeaderDownload").innerText = isPageRedirect + "," + isBurled;
+	//document.getElementById("HeaderDownload").innerText = isPageRedirect + "," + isBurled;
 	if(isPageRedirect || !isBurled){
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
@@ -966,7 +966,7 @@ googletag.cmd.push(function() {
 	
 	for(var i = 0; i < 3; i++){
 
-	var Ad = document.getElementById("Content"+i++);
+	var Ad = document.getElementById("Content"+i+1);
 
 	Ad.style.display = "none";
 	

@@ -1090,7 +1090,7 @@ function Dot(View){
     
     if (this.x > window.innerWidth - window.innerWidth / 12) {
     
-    this.x = -10;
+    this.x = window.innerWidth / 12;
 
     }
     

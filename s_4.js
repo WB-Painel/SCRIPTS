@@ -1075,7 +1075,7 @@ function Dot(View){
     this.obj = document.createElement("div");
     this.obj.classList.add("dot");
     this.obj.style.position = "absolute";
-    this.obj.style.left = this.x + "px"; 
+    this.obj.style.left = window.innerWidth / 12 + this.x + "px"; 
     this.obj.style.top = this.y + "px"; 
     this.obj.style.width =  "20px";
     this.obj.style.height = "20px";
@@ -1088,7 +1088,7 @@ function Dot(View){
 
     this.x += this.speed;
     
-    if (this.x > window.innerWidth) {
+    if (this.x > window.innerWidth - window.innerWidth / 12) {
     
     this.x = -10;
 

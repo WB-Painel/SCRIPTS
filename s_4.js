@@ -833,24 +833,26 @@ googletag.cmd.push(function() {
 	}
 	
 	function DetectAdClick(){
-
+		
+	document.getElementById("HeaderDownload").innerText = "";
+		
 	document.addEventListener("visibilitychange", function () {
 
-	//document.getElementById("HeaderDownload").innerText = "A";
-	
+	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "A";
+		
 	if(document.hidden){
 
 	if(document.activeElement.tagName === "IFRAME"){
 
 	isBurled = false;
 
-	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "B";
+	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "B";
 
 	}else{
 
 	isBurled = true;
 
-	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "C";
+	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "C";
 
 	}
 	
@@ -860,7 +862,7 @@ googletag.cmd.push(function() {
 	isBurled = true;
 	},5000);
 
-	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "D";
+	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "D";
 
 	}
 	
@@ -882,7 +884,7 @@ googletag.cmd.push(function() {
 	
 	isBurled = false;
 
-	document.getElementById("HeaderDownload").innerText = isBurled;
+	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + isBurled;
 	
 	});
 	

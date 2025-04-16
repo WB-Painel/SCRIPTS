@@ -1074,7 +1074,7 @@ function Dot(View){
 
     this.x += this.speed;
     
-    if (this.x > View.offsetWidth) {
+    if (this.x > window.innerWidth) {
     
     this.x = -10;
 

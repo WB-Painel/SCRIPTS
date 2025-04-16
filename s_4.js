@@ -788,6 +788,10 @@ googletag.cmd.push(function() {
 	BlockAdClick.style.opacity = "0.0";
 	
 	BlockAdClick.style.pointerEvents = "none";
+
+	var dots = Array.apply(null, Array(50)).map(a => new Dot());
+	
+	requestAnimationFrame(paint);
 	
 	return BlockAdClick;
 	
@@ -1043,3 +1047,48 @@ googletag.cmd.push(function() {
 	return l;
 	
 	}
+
+//New
+function Dot(View){
+
+    this.y = View.offsetHeight * Math.random();
+    this.x = View.offsetWidth * Math.random();
+    this.speed = Math.floor(Math.random() * 20) + 2;
+
+    this.obj = document.createElement("div");
+    this.obj.classList.add("dot");
+    this.obj.style.position = "absolute";
+    this.obj.style.top = this.y + "px"; 
+    this.obj.style.left = this.x + "px"; 
+    this.obj.style.height =  "5px";
+    this.obj.style.width = "5px";
+    this.obj.style.background = "#121212ff";
+
+    View.append(this.obj);
+
+    this.move = function() {
+
+    this.x += this.speed;
+    
+    if (this.x > View.offsetWidth) {
+    
+    this.x = -10;
+
+    }
+    
+    this.obj.style.left = this.x + 'px';
+    
+    };
+};
+
+function paint() {
+
+requestAnimationFrame(paint);
+
+for (dot of dots) {
+
+dot.move();
+
+}
+
+}

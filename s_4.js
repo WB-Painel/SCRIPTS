@@ -848,25 +848,15 @@ googletag.cmd.push(function() {
 
 	isBurled = false;
 
-	document.getElementById("HeaderDownload").innerText = isBurled;
-	
 	}else{
 
 	isBurled = true;
-
-	//document.getElementById("HeaderDownload").innerText = isBurled;
 
 	}
 	
 	}else{
 
-	//setTimeout(function(){
-
 	isBurled = true;
-
-	//document.getElementById("HeaderDownload").innerText = isBurled;
-	
-	//},5000);
 
 	}
 	

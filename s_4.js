@@ -804,8 +804,6 @@ googletag.cmd.push(function() {
 	}
 	}
 	}
-
-	requestAnimationFrame(paint);
 	
 	return BlockAdClick;
 	
@@ -974,7 +972,9 @@ googletag.cmd.push(function() {
 
 	BlockAdClick.style.opacity = "1.0";
 	
-	//BlockAdClick.style.pointerEvents = "auto";
+	BlockAdClick.style.pointerEvents = "auto";
+
+	requestAnimationFrame(paint);
 	
 	}
 	

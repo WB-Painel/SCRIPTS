@@ -860,6 +860,8 @@ googletag.cmd.push(function() {
 
 	isBurled = true;
 
+	isPageRedirect = false;
+
 	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "D";
 
 	}

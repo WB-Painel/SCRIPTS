@@ -2,7 +2,7 @@ var enabled = false;
 	
 var isPageRedirect = false;
 
-var dots;
+var dots1, dots2, dots3;
 
     init();
 	
@@ -791,9 +791,20 @@ googletag.cmd.push(function() {
 	
 	BlockAdClick.style.pointerEvents = "none";
 
-	dots = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
-	
+	if(!dots1){
+	dots1 = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
 	requestAnimationFrame(paint);
+	}
+
+	if(!dots2){
+	dots2 = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
+	requestAnimationFrame(paint);
+	}
+
+	if(!dots3){
+	dots3 = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
+	requestAnimationFrame(paint);
+	}
 	
 	return BlockAdClick;
 	

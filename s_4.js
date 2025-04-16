@@ -860,8 +860,6 @@ googletag.cmd.push(function() {
 	
 	var isBurled = true;
 
-	document.activeElement.blur();
-	
 	//document.getElementById("HeaderDownload").innerText = "";
 		
 	document.addEventListener("visibilitychange", function () {
@@ -1058,7 +1056,7 @@ googletag.cmd.push(function() {
 	vv.appendChild(l(width,20,left,bottom-20));
 
 
-	document.getElementById("HeaderDownload").focus();
+	document.activeElement.blur();
 	
 	}
 	

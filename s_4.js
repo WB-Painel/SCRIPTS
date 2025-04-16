@@ -915,7 +915,7 @@ function foco(){
 
 if(document.activeElement.tagName === "IFRAME"){
 
-var e = new Event("focusin");
+var e = new Event("blur");
 
 dispatchEvent(e);
 
@@ -933,7 +933,7 @@ requestAnimationFrame(foco);
 	_("BlockTwo");
 	_("BlockTree");
 	
-	document.addEventListener("focusin", function(){
+	window.addEventListener("blur", function(){
 
 	alert(document.activeElement.tagName);
 	

@@ -966,7 +966,15 @@ googletag.cmd.push(function() {
 
 	var AdOne = document.getElementById("Content1");
 
-	AdOne.style.opacity = "0.5";
+	AdOne.style.opacity = "0.0";
+
+	var AdTwo = document.getElementById("Content2");
+
+	AdTwo.style.opacity = "0.0";
+
+	var AdTree = document.getElementById("Content3");
+
+	AdTree.style.opacity = "0.0";
 /*
 	var Ad1 = document.getElementById("Content1");
 
@@ -987,10 +995,10 @@ googletag.cmd.push(function() {
 	BlockAdClick.style.opacity = "1.0";
 	
 	BlockAdClick.style.pointerEvents = "auto";
-
-	requestAnimationFrame(paint);
 	
 	}
+
+	requestAnimationFrame(paint);
 	
 	EnableDownload();
 	

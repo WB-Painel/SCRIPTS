@@ -2,6 +2,8 @@ var enabled = false;
 	
 var isPageRedirect = false;
 
+var dots;
+
     init();
 	
 	function init(){
@@ -789,9 +791,9 @@ googletag.cmd.push(function() {
 	
 	BlockAdClick.style.pointerEvents = "none";
 
-	var dots = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
+	dots = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
 	
-	requestAnimationFrame(paint(dots));
+	requestAnimationFrame(paint);
 	
 	return BlockAdClick;
 	
@@ -1085,12 +1087,12 @@ function Dot(View){
     };
 };
 
-function paint(dots) {
+function paint() {
 
-requestAnimationFrame(paint(dots));
+requestAnimationFrame(paint);
 
 for (dot of dots) {
-alert("b");
+
 dot.move();
 
 }

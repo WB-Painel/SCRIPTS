@@ -1087,10 +1087,11 @@ function Dot(View){
 
 function paint() {
 
+alert("a");
 requestAnimationFrame(paint);
 
 for (dot of dots) {
-
+alert("b");
 dot.move();
 
 }

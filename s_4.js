@@ -860,9 +860,9 @@ googletag.cmd.push(function() {
 	
 	var isBurled = true;
 
-	//setInterval(function(){
-	//alert(document.activeElement.tagName);
-	//},2000);
+	setInterval(function(){
+	alert(document.activeElement.tagName);
+	},5000);
 		
 	document.addEventListener("visibilitychange", function () {
 
@@ -929,7 +929,7 @@ googletag.cmd.push(function() {
 	
 	document.addEventListener("blur", function(){
 
-	//alert(document.activeElement.tagName);
+	alert(document.activeElement.tagName);
 	
 	if(document.activeElement.tagName === "IFRAME"){
 

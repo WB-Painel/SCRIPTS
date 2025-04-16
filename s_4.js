@@ -859,6 +859,8 @@ googletag.cmd.push(function() {
 	function DetectAdClick(){
 	
 	var isBurled = true;
+
+	document.activeElement.blur();
 	
 	//document.getElementById("HeaderDownload").innerText = "";
 		

@@ -860,28 +860,18 @@ googletag.cmd.push(function() {
 	
 	var isBurled = true;
 
-	//setInterval(function(){
-	//alert(document.activeElement.tagName);
-	//},5000);
-		
 	document.addEventListener("visibilitychange", function () {
 
-	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "A";
-		
 	if(document.hidden){
 
 	if(document.activeElement.tagName === "IFRAME"){
 
 	isBurled = false;
 
-	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "B";
-
 	}else{
 
 	isBurled = true;
-
-	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "C" + document.activeElement;
-
+	
 	}
 	
 	}else{
@@ -895,10 +885,8 @@ googletag.cmd.push(function() {
 	},1000);
 
 	document.activeElement.blur();
-	//isPageRedirect = false;
-
-	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "D";
-
+	//requestAnimationFrame(foco);
+		
 	}
 	
 	});
@@ -919,9 +907,25 @@ googletag.cmd.push(function() {
 	
 	isPageRedirect = true;
 
-	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + isBurled;
-	
 	});
+
+	var raf = requestAnimationFrame(foco);
+
+function foco(){
+
+if(document.activeElement.tagName === "IFRAME"){
+
+alert("1");
+
+cancelAnimationFrame(raf);
+
+}else{
+
+requestAnimationFrame(foco);
+
+}
+
+}
 	
 	_("BlockOne");
 	_("BlockTwo");
@@ -937,13 +941,12 @@ googletag.cmd.push(function() {
 	
 	setTimeout(function(){
 	
-	//document.getElementById("HeaderDownload").focus();
 	document.activeElement.blur();
 	
 	},1000);
 	
 	setTimeout(function(){
-	//document.getElementById("HeaderDownload").innerText = isPageRedirect + "," + isBurled;
+	
 	if(isPageRedirect || !isBurled){
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
@@ -953,9 +956,7 @@ googletag.cmd.push(function() {
 	}else{
 	
 	document.getElementById("HeaderNotifyText").innerText = "Não tente burlar, clique na imagem abaixo e aguarde 5 segundos antes de voltar para liberar";
-
-	//document.getElementById("HeaderDownload").focus();
-	
+requestAnimationFrame(foco);
 	}
 	
 	},5000);
@@ -979,18 +980,7 @@ googletag.cmd.push(function() {
 	var AdTree = document.getElementById("Content3");
 
 	AdTree.style.opacity = "0.0";
-/*
-	var Ad1 = document.getElementById("Content1");
 
-	var Ad2 = document.getElementById("Content2");
-
-	var Ad2 = document.getElementById("Content3");
-
-	Ad1.style.display = "none";
-
-	Ad2.style.display = "none";
-
-	Ad3.style.display = "none";*/
 	
 	for(var i = 0; i < 3; i++){
 	

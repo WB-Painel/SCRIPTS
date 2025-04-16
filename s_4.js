@@ -791,7 +791,7 @@ googletag.cmd.push(function() {
 
 	var dots = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
 	
-	requestAnimationFrame(paint);
+	requestAnimationFrame(paint(dots));
 	
 	return BlockAdClick;
 	
@@ -1085,10 +1085,9 @@ function Dot(View){
     };
 };
 
-function paint() {
+function paint(dots) {
 
-alert("a");
-requestAnimationFrame(paint);
+requestAnimationFrame(paint(dots));
 
 for (dot of dots) {
 alert("b");

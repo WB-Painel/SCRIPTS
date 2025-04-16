@@ -912,7 +912,7 @@ googletag.cmd.push(function() {
 	var raf = requestAnimationFrame(foco);
 
 function foco(){
-
+alert("*");
 if(document.activeElement.tagName === "IFRAME"){
 
 alert("1");

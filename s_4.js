@@ -792,15 +792,15 @@ googletag.cmd.push(function() {
 	BlockAdClick.style.pointerEvents = "none";
 
 	if(!dots1){
-	dots1 = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
+	dots1 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}else{
 
 	if(!dots2){
-	dots2 = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
+	dots2 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}else{
 
 	if(!dots3){
-	dots3 = Array.apply(null, Array(10)).map(a => new Dot(BlockAdClick));
+	dots3 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}
 	}
 	}

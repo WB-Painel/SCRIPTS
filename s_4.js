@@ -860,7 +860,7 @@ googletag.cmd.push(function() {
 
 	isBurled = true;
 
-	isPageRedirect = false;
+	//isPageRedirect = false;
 
 	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "D";
 
@@ -905,7 +905,7 @@ googletag.cmd.push(function() {
 	},1000);
 	
 	setTimeout(function(){
-	
+	document.getElementById("HeaderDownload").innerText = isPageRedirect + "," + isBurled;
 	if(isPageRedirect || !isBurled){
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";

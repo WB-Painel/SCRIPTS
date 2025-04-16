@@ -836,7 +836,7 @@ googletag.cmd.push(function() {
 
 	document.addEventListener("visibilitychange", function () {
 
-	document.getElementById("HeaderDownload").innerText = "A";
+	//document.getElementById("HeaderDownload").innerText = "A";
 	
 	if(document.hidden){
 
@@ -844,21 +844,23 @@ googletag.cmd.push(function() {
 
 	isBurled = false;
 
-	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "B";
+	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "B";
 
 	}else{
 
 	isBurled = true;
 
-	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "C";
+	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "C";
 
 	}
 	
 	}else{
 
+	setTimeout(function(){
 	isBurled = true;
+	},5000);
 
-	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "D";
+	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "D";
 
 	}
 	

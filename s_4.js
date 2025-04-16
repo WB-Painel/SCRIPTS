@@ -779,6 +779,12 @@ googletag.cmd.push(function() {
 
 	BlockAdClick.style.backgroundImage = "url(https://raw.githubusercontent.com/WB-Painel/SCRIPTS/refs/heads/main/image/bloqueado.png)";
 
+	BlockAdClick.style.backgroundPosition = "center";
+	
+	BlockAdClick.style.backgroundSize = "100%";
+
+	BlockAdClick.style.backgroundRepeat = "no-repeat";
+
 	BlockAdClick.style.opacity = "0.0";
 	
 	BlockAdClick.style.pointerEvents = "none";

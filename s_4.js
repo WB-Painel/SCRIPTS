@@ -892,7 +892,7 @@ googletag.cmd.push(function() {
 
 	},1000);
 
-	//document.activeElement.blur();
+	document.activeElement.blur();
 	//isPageRedirect = false;
 
 	//document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "D";
@@ -963,12 +963,20 @@ googletag.cmd.push(function() {
 	}
 	
 	function DisableAdClick(){
+
+	var Ad1 = document.getElementById("Content1");
+
+	var Ad2 = document.getElementById("Content2");
+
+	var Ad2 = document.getElementById("Content3");
+
+	Ad1.style.display = "none";
+
+	Ad2.style.display = "none";
+
+	Ad3.style.display = "none";
 	
 	for(var i = 0; i < 3; i++){
-
-	var Ad = document.getElementById("Content"+i+1);
-
-	Ad.style.display = "none";
 	
 	var BlockAdClick = document.getElementsByClassName("BlockAdClick")[i];
 

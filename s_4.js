@@ -848,7 +848,7 @@ googletag.cmd.push(function() {
 
 	isBurled = false;
 
-	//document.getElementById("HeaderDownload").innerText = isBurled;
+	document.getElementById("HeaderDownload").innerText = isBurled;
 	
 	}else{
 

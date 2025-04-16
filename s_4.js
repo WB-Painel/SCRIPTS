@@ -1062,7 +1062,7 @@ function Dot(View){
     this.obj.style.left = this.x + "px"; 
     this.obj.style.height =  "5px";
     this.obj.style.width = "5px";
-    this.obj.style.background = "#121212ff";
+    this.obj.style.backgroundColor = "#121212ff";
 
     View.append(this.obj);
 

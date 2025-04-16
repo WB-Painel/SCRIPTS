@@ -2,8 +2,6 @@ var enabled = false;
 	
 var isPageRedirect = false;
 
-var isBurled = true;
-
     init();
 	
 	function init(){
@@ -833,7 +831,9 @@ googletag.cmd.push(function() {
 	}
 	
 	function DetectAdClick(){
-		
+	
+	var isBurled = true;
+	
 	document.getElementById("HeaderDownload").innerText = "";
 		
 	document.addEventListener("visibilitychange", function () {

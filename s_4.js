@@ -775,9 +775,9 @@ googletag.cmd.push(function() {
 	
 	BlockAdClick.style.height = window.innerHeight / 3 + 10 + "px";
 
-	BlockAdClick.style.backgroundColor = "#121212ff";
+	BlockAdClick.style.backgroundColor = "#12121200";
 
-	BlockAdClick.style.backgroundImage = "url(https://raw.githubusercontent.com/WB-Painel/SCRIPTS/refs/heads/main/image/bloqueado.png)";
+	//BlockAdClick.style.backgroundImage = "url(https://raw.githubusercontent.com/WB-Painel/SCRIPTS/refs/heads/main/image/bloqueado.png)";
 
 	BlockAdClick.style.backgroundPosition = "center";
 	
@@ -785,7 +785,7 @@ googletag.cmd.push(function() {
 
 	BlockAdClick.style.backgroundRepeat = "no-repeat";
 
-	BlockAdClick.style.opacity = "0.0";
+	BlockAdClick.style.opacity = "1.0";
 	
 	BlockAdClick.style.pointerEvents = "none";
 
@@ -1060,9 +1060,10 @@ function Dot(View){
     this.obj.style.position = "absolute";
     this.obj.style.top = this.y + "px"; 
     this.obj.style.left = this.x + "px"; 
-    this.obj.style.height =  "5px";
-    this.obj.style.width = "5px";
-    this.obj.style.backgroundColor = "#121212ff";
+    this.obj.style.height =  "20px";
+    this.obj.style.width = "20px";
+    this.obj.style.backgroundColor = "red";
+    this.obj.style.zIndex = "999999";
 
     View.append(this.obj);
 

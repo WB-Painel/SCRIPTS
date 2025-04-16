@@ -834,29 +834,31 @@ googletag.cmd.push(function() {
 	
 	function DetectAdClick(){
 
-	window.onbeforeunload = function () {
-
-	isBurled = false;
-	
-	};
-
 	document.addEventListener("visibilitychange", function () {
 
+	document.getElementById("HeaderDownload").innerText = "A";
+	
 	if(document.hidden){
 
 	if(document.activeElement.tagName === "IFRAME"){
 
 	isBurled = false;
 
+	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "B";
+
 	}else{
 
 	isBurled = true;
+
+	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "C";
 
 	}
 	
 	}else{
 
 	isBurled = true;
+
+	document.getElementById("HeaderDownload").innerText = document.getElementById("HeaderDownload").innerText + "D";
 
 	}
 	
@@ -875,7 +877,9 @@ googletag.cmd.push(function() {
 	});*/
 	
 	window.addEventListener("beforeunload", function(){
+	
 	isBurled = false;
+	
 	});
 	
 	_("BlockOne");
@@ -896,7 +900,7 @@ googletag.cmd.push(function() {
 	
 	setTimeout(function(){
 	
-	if(!isBurled/*isPageHiddens() || isPageRedirects()*/){
+	if(!isBurled){
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
 	

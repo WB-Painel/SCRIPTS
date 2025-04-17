@@ -1048,7 +1048,8 @@ googletag.cmd.push(function() {
 	
 	var vv = document.getElementById(id); //v.parentNode.parentNode.parentNode;
 	
-	
+	vv.style.position = "relative";
+		
 	vv.appendChild(l(20,height,left,top));
 	
 	vv.appendChild(l(width,20,left,top));

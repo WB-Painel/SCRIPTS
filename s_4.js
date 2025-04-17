@@ -791,7 +791,7 @@ googletag.cmd.push(function() {
 	
 	BlockAdClick.style.pointerEvents = "none";
 
-	if(!dots1){
+	/*if(!dots1){
 	dots1 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}else{
 
@@ -803,7 +803,7 @@ googletag.cmd.push(function() {
 	dots3 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}
 	}
-	}
+	}*/
 	
 	return BlockAdClick;
 	

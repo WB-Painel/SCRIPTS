@@ -1046,7 +1046,7 @@ googletag.cmd.push(function() {
 	var height = parseInt(rect.height);
 	
 	
-	var vv = v.parentNode.parentNode/*.parentNode*/;
+	var vv = document.getElementById(id); //v.parentNode.parentNode.parentNode;
 	
 	
 	vv.appendChild(l(20,height,left,top));

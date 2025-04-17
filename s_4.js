@@ -939,7 +939,7 @@ googletag.cmd.push(function() {
 
 	if(document.activeElement.tagName === "IFRAME"){
 
-	alert(document.activeElement.tagName);
+	//alert(document.activeElement.tagName);
 	
 	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
 	

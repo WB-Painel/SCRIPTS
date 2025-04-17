@@ -1027,6 +1027,7 @@ googletag.cmd.push(function() {
 	clearInterval(inter);
 
 	var vv = v.parentNode.parentNode.parentNode;
+	vv.style.position = "relative";
 
 	
 	var rect = v.getBoundingClientRect();

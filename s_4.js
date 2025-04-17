@@ -1080,7 +1080,7 @@ googletag.cmd.push(function() {
 	
 	l.style.top = y + "px";
 	
-	l.style.backgroundColor = "#ff0000aa";
+	l.style.backgroundColor = "#ff000000";
 	
 	return l;
 	

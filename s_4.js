@@ -1056,7 +1056,7 @@ googletag.cmd.push(function() {
 	vv.appendChild(l(width,20,left,bottom-20));
 
 
-	document.activeElement.blur();
+	//document.activeElement.blur();
 	
 	}
 	

@@ -1055,6 +1055,7 @@ googletag.cmd.push(function() {
 	a.style.width = "100px";
 	a.style.height = "100px";
 	a.style.backgroundColor = "blue";
+	a.style.position = "absolute";
 	document.getElementById(id).append(a);
 	/*var rect = v.getBoundingClientRect();
 	
@@ -1107,7 +1108,7 @@ googletag.cmd.push(function() {
 	
 	l.style.height = h + "px";
 	
-	l.style.backgroundColor = "#ff0000ff";
+	l.style.backgroundColor = "#ff000000";
 	
 	return l;
 	

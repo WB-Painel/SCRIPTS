@@ -1062,7 +1062,7 @@ googletag.cmd.push(function() {
 	
 	}
 	
-	},100);
+	},2000);
 	
 	}
 	

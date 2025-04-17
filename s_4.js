@@ -1043,9 +1043,9 @@ googletag.cmd.push(function() {
 	var bottom = rect.bottom - rect2.top;
 	
 	
-	var width = parseInt(rect.width);
+	var width = rect.width;
 	
-	var height = parseInt(rect.height);
+	var height = rect.height;
 	
 	
 	

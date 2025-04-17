@@ -878,13 +878,13 @@ googletag.cmd.push(function() {
 	
 	}else{
 
-	//setTimeout(function(){
+	setTimeout(function(){
 	
 	isBurled = true;
 
 	isPageRedirect = false;
 
-	//},1000);
+	},500);
 
 	document.getElementById("HeaderDownload").focus();
 	//requestAnimationFrame(foco);
@@ -947,7 +947,7 @@ googletag.cmd.push(function() {
 
 	document.getElementById("HeaderDownload").focus();
 	
-	},1000);
+	},500);
 	
 	setTimeout(function(){
 	

@@ -935,14 +935,14 @@ requestAnimationFrame(foco);
 	
 	window.addEventListener("blur", function(){
 
-	alert(document.activeElement.tagName);
-	
 	if(document.activeElement.tagName === "IFRAME"){
 
+	alert(document.activeElement.tagName);
+	
 	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
 	
 	setTimeout(function(){
-	
+
 	document.activeElement.blur();
 	
 	},1000);
@@ -958,7 +958,9 @@ requestAnimationFrame(foco);
 	}else{
 	
 	document.getElementById("HeaderNotifyText").innerText = "Não tente burlar, clique na imagem abaixo e aguarde 5 segundos antes de voltar para liberar";
-requestAnimationFrame(foco);
+
+	requestAnimationFrame(foco);
+	
 	}
 	
 	},5000);

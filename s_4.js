@@ -921,7 +921,7 @@ googletag.cmd.push(function() {
 	
 	dispatchEvent(e);
 	
-	cancelAnimationFrame(raf);
+	//cancelAnimationFrame(raf);
 	
 	}else{
 	

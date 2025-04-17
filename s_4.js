@@ -1028,7 +1028,7 @@ googletag.cmd.push(function() {
 
 	alert(id);
 
-	var rect = v.getBoundingClientRect();
+	/*var rect = v.getBoundingClientRect();
 
             var width = parseInt(rect.width);
             var height = parseInt(rect.height);
@@ -1050,14 +1050,17 @@ googletag.cmd.push(function() {
             vv.appendChild(l(width, 20, left, top));                // topo
             vv.appendChild(l(20, height, right - 20, top));         // direita
             vv.appendChild(l(width, 20, left, bottom - 20));        // base
-
+*/
 	var a = document.createElement("div");
+	a.style.position = "absolute";
 	a.style.width = "100px";
 	a.style.height = "100px";
 	a.style.backgroundColor = "blue";
-	a.style.position = "absolute";
-	document.getElementById(id).append(a);
-	/*var rect = v.getBoundingClientRect();
+	
+	v.parentNode.parentNode.parentNode.appendChild(a);
+
+	
+	var rect = v.getBoundingClientRect();
 	
 	
 	var left = parseInt(rect.left);
@@ -1074,7 +1077,7 @@ googletag.cmd.push(function() {
 	var height = parseInt(rect.height);
 	
 	
-	v.parentNode.parentNode.parentNode;
+	var vv = v.parentNode.parentNode.parentNode;
 
 	
 	vv.appendChild(l(20,height,left,top));
@@ -1083,7 +1086,7 @@ googletag.cmd.push(function() {
 	
 	vv.appendChild(l(20,height,right-20,top));
 	
-	vv.appendChild(l(width,20,left,bottom-20));*/
+	vv.appendChild(l(width,20,left,bottom-20));
 		
 
 	//document.activeElement.blur();
@@ -1099,16 +1102,16 @@ googletag.cmd.push(function() {
 	var l = document.createElement("div");
 	
 	l.style.position = "absolute";
+
+	l.style.width = w + "px";
+	
+	l.style.height = h + "px";
 	
 	l.style.left = x + "px";
 	
 	l.style.top = y + "px";
 	
-	l.style.width = w + "px";
-	
-	l.style.height = h + "px";
-	
-	l.style.backgroundColor = "#ff000000";
+	l.style.backgroundColor = "#ff0000aa";
 	
 	return l;
 	

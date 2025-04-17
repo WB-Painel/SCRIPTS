@@ -4,6 +4,8 @@ var isPageRedirect = false;
 
 var dots1, dots2, dots3;
 
+var raf;
+
     init();
 	
 	function init(){
@@ -909,25 +911,25 @@ googletag.cmd.push(function() {
 
 	});
 
-	var raf = requestAnimationFrame(foco);
-
-function foco(){
-
-if(document.activeElement.tagName === "IFRAME"){
-
-var e = new Event("blur");
-
-dispatchEvent(e);
-
-cancelAnimationFrame(raf);
-
-}else{
-
-requestAnimationFrame(foco);
-
-}
-
-}
+	raf = requestAnimationFrame(foco);
+	
+	function foco(){
+	
+	if(document.activeElement.tagName === "IFRAME"){
+	
+	var e = new Event("blur");
+	
+	dispatchEvent(e);
+	
+	cancelAnimationFrame(raf);
+	
+	}else{
+	
+	raf = requestAnimationFrame(foco);
+	
+	}
+	
+	}
 	
 	_("BlockOne");
 	_("BlockTwo");
@@ -959,7 +961,7 @@ requestAnimationFrame(foco);
 	
 	document.getElementById("HeaderNotifyText").innerText = "Não tente burlar, clique na imagem abaixo e aguarde 5 segundos antes de voltar para liberar";
 
-	requestAnimationFrame(foco);
+	raf = requestAnimationFrame(foco);
 	
 	}
 	

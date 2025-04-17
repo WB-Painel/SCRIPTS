@@ -961,7 +961,7 @@ googletag.cmd.push(function() {
 	
 	document.getElementById("HeaderNotifyText").innerText = "Não tente burlar, clique na imagem abaixo e aguarde 5 segundos antes de voltar para liberar";
 
-	raf = requestAnimationFrame(foco);
+	//raf = requestAnimationFrame(foco);
 	
 	}
 	

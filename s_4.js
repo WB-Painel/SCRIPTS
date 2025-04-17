@@ -1051,13 +1051,18 @@ googletag.cmd.push(function() {
             vv.appendChild(l(20, height, right - 20, top));         // direita
             vv.appendChild(l(width, 20, left, bottom - 20));        // base
 */
+
+	var vv = v.parentNode.parentNode.parentNode;
+	
 	var a = document.createElement("div");
 	a.style.position = "absolute";
 	a.style.width = "100px";
 	a.style.height = "100px";
+	a.style.left = "0px"; // agora fica no topo-esquerdo do bloco
+        a.style.top = "0px";
 	a.style.backgroundColor = "blue";
 	
-	v.parentNode.parentNode.parentNode.appendChild(a);
+	vv.appendChild(a);
 
 	
 	var rect = v.getBoundingClientRect();
@@ -1077,8 +1082,7 @@ googletag.cmd.push(function() {
 	var height = parseInt(rect.height);
 	
 	
-	var vv = v.parentNode.parentNode.parentNode;
-
+	
 	
 	vv.appendChild(l(20,height,left,top));
 	

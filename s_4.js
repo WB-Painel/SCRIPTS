@@ -1026,61 +1026,25 @@ googletag.cmd.push(function() {
 	
 	clearInterval(inter);
 
-	alert(id);
-
-	/*var rect = v.getBoundingClientRect();
-
-            var width = parseInt(rect.width);
-            var height = parseInt(rect.height);
-
-            var vv = document.getElementById(id); // pai onde as bordas serão adicionadas
-
-            // CORREÇÃO 1: garantir que o contêiner seja referência de posicionamento
-            vv.style.position = "relative";
-
-            // CORREÇÃO 2: calcular posição relativa ao contêiner (vv)
-            var vvRect = vv.getBoundingClientRect();
-
-            var left = rect.left - vvRect.left;
-            var top = rect.top - vvRect.top;
-            var right = rect.right - vvRect.left;
-            var bottom = rect.bottom - vvRect.top;
-
-            vv.appendChild(l(20, height, left, top));               // esquerda
-            vv.appendChild(l(width, 20, left, top));                // topo
-            vv.appendChild(l(20, height, right - 20, top));         // direita
-            vv.appendChild(l(width, 20, left, bottom - 20));        // base
-*/
-
 	var vv = v.parentNode.parentNode.parentNode;
-	
-	var a = document.createElement("div");
-	a.style.position = "absolute";
-	a.style.width = "100px";
-	a.style.height = "100px";
-	a.style.left = "0px"; // agora fica no topo-esquerdo do bloco
-        a.style.top = "0px";
-	a.style.backgroundColor = "blue";
-	
-	vv.appendChild(a);
 
 	
 	var rect = v.getBoundingClientRect();
+	var rect2 = vv.getBoundingClientRect();
 	
 	
-	var left = parseInt(rect.left);
+	var left = rect.left - rect2.left;
 	
-	var top = parseInt(rect.top);
+	var top = rect.top - rect2.top;
 	
-	var right = parseInt(rect.right);
+	var right = rect.right - rect2.left;
 	
-	var bottom = parseInt(rect.bottom);
+	var bottom = rect.bottom - rect2.top;
 	
 	
 	var width = parseInt(rect.width);
 	
 	var height = parseInt(rect.height);
-	
 	
 	
 	
@@ -1097,7 +1061,7 @@ googletag.cmd.push(function() {
 	
 	}
 	
-	},2000);
+	},100);
 	
 	}
 	

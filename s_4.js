@@ -1050,8 +1050,12 @@ googletag.cmd.push(function() {
             vv.appendChild(l(width, 20, left, top));                // topo
             vv.appendChild(l(20, height, right - 20, top));         // direita
             vv.appendChild(l(width, 20, left, bottom - 20));        // base
-        
-	
+
+	var a = document.createElement("div");
+	a.style.width = "100px";
+	a.style.height = "100px";
+	a.style.backgroundColor = "blue";
+	document.getElementById(id).append(a);
 	/*var rect = v.getBoundingClientRect();
 	
 	

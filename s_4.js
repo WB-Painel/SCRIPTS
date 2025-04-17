@@ -886,7 +886,7 @@ googletag.cmd.push(function() {
 
 	},1000);
 
-	document.activeElement.blur();
+	document.getElementById("HeaderDownload").focus();
 	//requestAnimationFrame(foco);
 		
 	}

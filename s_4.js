@@ -1025,6 +1025,8 @@ googletag.cmd.push(function() {
 	if(typeof v !== "undefined"){
 	
 	clearInterval(inter);
+
+	alert(id);
 	
 	
 	var rect = v.getBoundingClientRect();

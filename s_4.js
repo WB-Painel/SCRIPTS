@@ -1078,7 +1078,7 @@ googletag.cmd.push(function() {
 	
 	l.style.height = h + "px";
 	
-	l.style.backgroundColor = "#ff000000";
+	l.style.backgroundColor = "#ff0000ff";
 	
 	return l;
 	

@@ -945,7 +945,7 @@ googletag.cmd.push(function() {
 	
 	setTimeout(function(){
 
-	document.activeElement.blur();
+	document.getElementById("HeaderNotifyText").focus();
 	
 	},1000);
 	

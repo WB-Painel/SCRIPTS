@@ -834,16 +834,14 @@ var raf;
 	function BottomDesign(){
 		
 	var BottomDesign = document.createElement("div");
+
+	BottomDesign.style.position = "absolute";
 	
 	BottomDesign.style.width = window.innerWidth + "px";
 	
-	BottomDesign.style.height = window.innerHeight / 64 + "px";
-	
-	BottomDesign.style.marginTop = "50px";
-	
-	BottomDesign.style.backgroundRepeat = "no-repeat";
-	
-	BottomDesign.style.backgroundSize = "100% 100%";
+	BottomDesign.style.height = window.innerHeight / 3 + "px";
+
+	initViewPager(BottomDesign);
 	
 	return BottomDesign;
 	

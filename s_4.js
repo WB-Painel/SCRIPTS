@@ -503,6 +503,8 @@ var raf;
 	
 	HeaderNotifyText.innerText = "Clique em algum anuncio para liberar";
 
+	HeaderNotifyText.style.width = window.innerWidth/1 - window.innerWidth/4 + "px";
+	
 	//ajustarTamanhoFonte();
 	
 	HeaderNotifyText.addEventListener("selectstart", function(f){

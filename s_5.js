@@ -1163,7 +1163,7 @@ CreateDot(View, DotsArray);
 }
 
 function paint(){
-
+/*
 for(dot of dots1){
 dot.removeDot();
 }
@@ -1172,7 +1172,16 @@ dot.removeDot();
 }
 for(dot of dots3){
 dot.removeDot();
-}
+}*/
+if (dots1.length > 0) {
+        dots1[0].removeDot(); // Remove o primeiro ponto de dots1
+    }
+    if (dots2.length > 0) {
+        dots2[0].removeDot(); // Remove o primeiro ponto de dots2
+    }
+    if (dots3.length > 0) {
+        dots3[0].removeDot(); // Remove o primeiro ponto de dots3
+    }
 
 requestAnimationFrame(paint);
 

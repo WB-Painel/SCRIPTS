@@ -1119,7 +1119,7 @@ var raf;
 
 //New
 function CreateDot(View, DotsArray){
-for(var i = 0; i < 50; i++){
+while(DotsArray.length < 50){
 Dot(View,DotsArray);
 }
 }

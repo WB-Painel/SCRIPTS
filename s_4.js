@@ -835,8 +835,6 @@ var raf;
 		
 	var BottomDesign = document.createElement("div");
 
-	BottomDesign.style.position = "absolute";
-	
 	BottomDesign.style.width = window.innerWidth + "px";
 	
 	BottomDesign.style.height = window.innerHeight / 3 + "px";

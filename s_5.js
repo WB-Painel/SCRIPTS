@@ -829,6 +829,8 @@ var raf;
 	}
 	}
 	}
+
+	requestAnimationFrame(paint);
 	
 	return BlockAdClick;
 	

@@ -839,7 +839,7 @@ var raf;
 	
 	BottomDesign.style.height = window.innerHeight / 3 + "px";
 
-	initViewPager(BottomDesign);
+	//initViewPager(BottomDesign);
 	
 	return BottomDesign;
 	

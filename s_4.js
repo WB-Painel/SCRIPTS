@@ -809,7 +809,7 @@ var raf;
 
 	BlockAdClick.style.backgroundRepeat = "no-repeat";
 
-	BlockAdClick.style.opacity = "0.5";
+	BlockAdClick.style.opacity = "0.0";
 	
 	BlockAdClick.style.pointerEvents = "none";
 

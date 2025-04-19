@@ -814,17 +814,17 @@ var raf;
 	BlockAdClick.style.pointerEvents = "none";
 
 	if(!dots1){
-	new dots1(BlockAdClick);
+	//new dots1(BlockAdClick);
 	//dots1 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}else{
 
 	if(!dots2){
-	new dots2(BlockAdClick);
+	//new dots2(BlockAdClick);
 	//dots2 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}else{
 
 	if(!dots3){
-	new dots3(BlockAdClick);
+	//new dots3(BlockAdClick);
 	//dots3 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}
 	}

@@ -1156,7 +1156,7 @@ DotsArray.splice(index, 1); // Remove o ponto da list
 
 }
 
-createDot(View, DotsArray);
+CreateDot(View, DotsArray);
 	
 }
 

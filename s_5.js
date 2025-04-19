@@ -814,23 +814,21 @@ var raf;
 	BlockAdClick.style.pointerEvents = "none";
 
 	if(!dots1){
-	//new dots1(BlockAdClick);
+	CreateDot(View, dots1);
 	//dots1 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}else{
 
 	if(!dots2){
-	//new dots2(BlockAdClick);
+	CreateDot(View, dots2);
 	//dots2 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}else{
 
 	if(!dots3){
-	//new dots3(BlockAdClick);
+	CreateDot(View, dots3);
 	//dots3 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}
 	}
 	}
-
-	//requestAnimationFrame(paint);
 	
 	return BlockAdClick;
 	
@@ -907,7 +905,7 @@ var raf;
 
 	isPageRedirect = false;
 
-	},10000);
+	},500);
 
 	document.getElementById("HeaderDownload").focus();
 	//requestAnimationFrame(foco);
@@ -1120,44 +1118,17 @@ var raf;
 	}
 
 //New
-//Resolvido:
-
-var dots1 = [], dots2 = [], dots3 = [];
-
-function dots1(View){
-
-for(var i = 0; i <= 50; i++){
-
-Dot(View);
-
+function CreateDot(View, DotsArray){
+for(var i = 0; i < 50; i++){
+Dot(View,DotsArray):
+}
 }
 
-}
+function Dot(View, DotsArray){
 
-function dots2(View){
-
-for(var i = 0; i <= 50; i++){
-
-Dot(View);
-
-}
-
-}
-
-function dots3(View){
-
-for(var i = 0; i <= 50; i++){
-
-Dot(View);
-
-}
-
-}
-
-function Dot(View) {
-var x = Math.floor(Math.random() * window.innerWidth);
-var y = Math.floor(Math.random() * (window.innerHeight / 3));
-
+var x = Math.floor(Math.random() * (window.innerWidth));
+var y = Math.floor(Math.random() * (window.innerHeight/3));
+	
 var dot = document.createElement("div");
 dot.classList.add("dot");
 dot.style.position = "absolute";
@@ -1169,117 +1140,36 @@ dot.style.backgroundColor = "red";
 
 View.append(dot);
 
-if(dots1.length !== 50){
-dots1.push(dot);
-}else if(dots2.length !== 50){
-dots2.push(dot);
-}else if(dots3.length !== 50){
-dots3.push(dot);
-}
+DotsArray.push(dot);
 
-dot.removeDot = function() {
+dot.removeDot = function(){
+
 this.parentElement.removeChild(this);
 
-if(dots1.includes(this)){
-dots1 = dots1.filter(d => d !== this);
-}else if(dots2.includes(this)){
-dots2 = dots2.filter(d => d !== this);
-}else if(dots3.includes(this)){
-dots3 = dots3.filter(d => d !== this);
+let index = DotsArray.indexOf(this);
+
+if (index > -1) {
+
+DotsArray.splice(index, 1); // Remove o ponto da list
+
 }
 
-if(dots1.length === 0){
-dots1(View);
+createDot(View, DotsArray);
+	
 }
-if(dots2.length === 0){
-dots2(View);
-}
-if(dots3.length === 0){
-dots3(View);
-}
-   
-};
 
 }
 
 function paint(){
 
 for(dot of dots1){
-
 dot.removeDot();
-
 }
-
 for(dot of dots2){
-
 dot.removeDot();
-
 }
-
 for(dot of dots3){
-
 dot.removeDot();
-
-}
-
-}
-
-function Dot_b(View){
-
-    this.x = window.innerWidth * Math.random();
-    this.y = window.innerHeight/3 * Math.random();
-
-    this.speed = 10/*Math.floor(Math.random() * 20) + 2*/;
-
-	//alert(this.x+","+this.y+","+this.speed+","+View.offsetWidth+","+View.offsetHeight+","+View.clientWidth+","+View.clientHeight);
-
-    this.obj = document.createElement("div");
-    this.obj.classList.add("dot");
-    this.obj.style.position = "absolute";
-    this.obj.style.width =  "10px";
-    this.obj.style.height = "10px";
-    this.obj.style.left = window.innerWidth / 12 + this.x + "px"; 
-    this.obj.style.top = this.y + "px"; 
-    this.obj.style.backgroundColor = "#121212ff";
-    this.obj.style.pointerEvents = "none";
-
-    View.append(this.obj);
-
-    this.move = function() {
-
-    this.x += this.speed;
-    
-    if (this.x > window.innerWidth - window.innerWidth / 12) {
-    
-    this.x = window.innerWidth / 12;
-
-    }
-    
-    this.obj.style.left = this.x + 'px';
-    
-    };
-};
-
-function paint_b() {
-
-requestAnimationFrame(paint);
-
-for (dot of dots1) {
-
-dot.move();
-
-}
-
-for (dot of dots2) {
-
-dot.move();
-
-}
-
-for (dot of dots3) {
-
-dot.move();
-
 }
 
 }

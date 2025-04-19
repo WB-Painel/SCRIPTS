@@ -1179,7 +1179,7 @@ var Container = HeaderNotifyText.parentElement;
     
 var fontSize = parseInt(window.innerHeight / 40);
 
-HeaderNotify.style.fontSize = fontSize + 'px';
+HeaderNotifyText.style.fontSize = fontSize + 'px';
 
 while (HeaderNotifyText.scrollHeight > Container.clientHeight || HeaderNotifyText.scrollWidth > Container.clientWidth) {
 

@@ -1120,7 +1120,7 @@ var raf;
 //New
 function CreateDot(View, DotsArray){
 for(var i = 0; i < 50; i++){
-Dot(View,DotsArray):
+Dot(View,DotsArray);
 }
 }
 

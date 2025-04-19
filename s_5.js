@@ -814,18 +814,23 @@ var raf;
 	BlockAdClick.style.pointerEvents = "none";
 
 	if(!dots1){
-	dots1 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
+	new dots1(BlockAdClick);
+	//dots1 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}else{
 
 	if(!dots2){
-	dots2 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
+	new dots2(BlockAdClick);
+	//dots2 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}else{
 
 	if(!dots3){
-	dots3 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
+	new dots3(BlockAdClick);
+	//dots3 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}
 	}
 	}
+
+	requestAnimationFrame(paint);
 	
 	return BlockAdClick;
 	
@@ -1115,36 +1120,105 @@ var raf;
 	}
 
 //New
-function Dot(View){
+//Resolvido:
 
-	var x = Math.floor(Math.random() * (window.innerWidth));
-	var y = Math.floor(Math.random() * (window.innerHeight/3));
-	
-	var dot = document.createElement("div");
-	dot.style.position = "absolute";
-	dot.style.width = "10px";
-	dot.style.height = "10px";
-	dot.style.left = x + "px";
-	dot.style.top = y + "px";
-	dot.style.backgroundColor = "red";
+var dots1 = [], dots2 = [], dots3 = [];
 
-	View.append(dot);
+function dots1(View){
 
-	remove = function(){
+for(var i = 0; i <= 50; i++){
 
-	this.parentElement.removeChild(this);
-	
-	}
+Dot(View);
+
+}
+
+}
+
+function dots2(View){
+
+for(var i = 0; i <= 50; i++){
+
+Dot(View);
+
+}
+
+}
+
+function dots3(View){
+
+for(var i = 0; i <= 50; i++){
+
+Dot(View);
+
+}
+
+}
+
+function Dot(View) {
+var x = Math.floor(Math.random() * window.innerWidth);
+var y = Math.floor(Math.random() * (window.innerHeight / 3));
+
+var dot = document.createElement("div");
+dot.classList.add("dot");
+dot.style.position = "absolute";
+dot.style.width = "10px";
+dot.style.height = "10px";
+dot.style.left = x + "px";
+dot.style.top = y + "px";
+dot.style.backgroundColor = "red";
+
+View.append(dot);
+
+if(dots1.length !== 50){
+dots1.push(dot);
+}else if(dots2.length !== 50){
+dots2.push(dot);
+}else if(dots3.length !== 50){
+dots3.push(dot);
+}
+
+dot.removeDot = function() {
+this.parentElement.removeChild(this);
+
+if(dots1.includes(this)){
+dots1 = dots1.filter(d => d !== this);
+}else if(dots2.includes(this)){
+dots2 = dots2.filter(d => d !== this);
+}else if(dots3.includes(this)){
+dots3 = dots3.filter(d => d !== this);
+}
+
+if(dots1.length === 0){
+dots1(View);
+}
+if(dots2.length === 0){
+dots2(View);
+}
+if(dots3.length === 0){
+dots3(View);
+}
+   
+};
 
 }
 
 function paint(){
 
-requestAnimationFrame(paint);
+for(dot of dots1){
 
-for(dot of dots){
+dot.removeDot();
 
-dot.remove();
+}
+
+for(dot of dots2){
+
+dot.removeDot();
+
+}
+
+for(dot of dots3){
+
+dot.removeDot();
 
 }
 

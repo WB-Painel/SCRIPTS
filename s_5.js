@@ -830,7 +830,7 @@ var raf;
 	}
 	}
 
-	requestAnimationFrame(paint);
+	//requestAnimationFrame(paint);
 	
 	return BlockAdClick;
 	

@@ -626,7 +626,7 @@ var raf;
 	
 	BlockOne.appendChild(AdOne());
 	
-	BlockOne.appendChild(BlockAdClick());
+	//BlockOne.appendChild(BlockAdClick());
 	
 	return BlockOne;
 	
@@ -662,7 +662,7 @@ var raf;
 	
 	BlockTwo.appendChild(AdTwo());
 	
-	BlockTwo.appendChild(BlockAdClick());
+	//BlockTwo.appendChild(BlockAdClick());
 	
 	return BlockTwo;
 	
@@ -698,7 +698,7 @@ var raf;
 	
 	BlockTree.appendChild(AdTree());
 	
-	BlockTree.appendChild(BlockAdClick());
+	//BlockTree.appendChild(BlockAdClick());
 	
 	return BlockTree;
 	

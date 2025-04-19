@@ -902,7 +902,7 @@ var raf;
 
 	isPageRedirect = false;
 
-	},5000);
+	},500);
 
 	document.getElementById("HeaderDownload").focus();
 	//requestAnimationFrame(foco);
@@ -910,9 +910,9 @@ var raf;
 	}
 	
 	});
-	/*document.getElementById("HeaderDownload").focus();
+	/*document.getElementById("HeaderDownload").focus();*/
 	
-	window.addEventListener("focus", function(){
+	/*window.addEventListener("focus", function(){
 	setTimeout(function(){
 	var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 	//alert(isMobile);
@@ -958,7 +958,12 @@ var raf;
 	if(document.activeElement.tagName === "IFRAME"){
 
 	//alert(document.activeElement.tagName);
-	
+
+	var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (isMobile) {
+	isPageRedirect = true; isBurled = false;
+	}
+		
 	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
 
 	ajustarTamanhoFonte();

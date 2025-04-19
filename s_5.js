@@ -2,6 +2,10 @@ var enabled = false;
 	
 var isPageRedirect = false;
 
+var dots1, dots2, dots3;
+
+var raf;
+
     init();
 	
 	function init(){
@@ -498,6 +502,10 @@ var isPageRedirect = false;
 	HeaderNotifyText.style.color = "white";
 	
 	HeaderNotifyText.innerText = "Clique em algum anuncio para liberar";
+
+	HeaderNotifyText.style.width = window.innerWidth/1 - window.innerWidth/4 + "px";
+	
+	//ajustarTamanhoFonte();
 	
 	HeaderNotifyText.addEventListener("selectstart", function(f){
 	f.preventDefault();
@@ -523,7 +531,29 @@ var isPageRedirect = false;
 	}
 	
 	function getCookie(Name){
+
+	if(Name === "GoogleAdBanner" && !document.cookie.includes(Name)){
+
+	setCookie(Name,1);
 	
+	}
+	
+	var cookies = document.cookie.split(';');
+	
+	for (var i = 0; i < cookies.length; i++) {
+	
+        var parts = cookies[i].split('=');
+	
+        if (parts[0].trim() === Name) {
+        
+	return parts[1];
+	
+        }
+	
+	}
+	
+	return null;
+	/*
 	var Cookie = document.cookie;
 	
 	if(Cookie.includes(Name)){
@@ -562,7 +592,7 @@ var isPageRedirect = false;
 	
 	}
 	
-	return Cookie;
+	return Cookie;*/
 	
 	}
 	
@@ -677,13 +707,13 @@ var isPageRedirect = false;
 	function AdOne(){
 
 	var Content1_slot;
-  googletag.cmd.push(function() {
+	googletag.cmd.push(function() {
 	var mapping = 	googletag.sizeMapping().addSize([0, 0], ['fluid',[250, 250],[300, 250],[336, 280]]).build();
 	Content1_slot = googletag.defineSlot("/22967751971/equipeatualizada/equipeatualizada_Content1",[[250, 250],[300, 250],[336, 280]], "Content1")
-    .defineSizeMapping(mapping)
-    .setCollapseEmptyDiv(true)
-    .addService(googletag.pubads());
-    googletag.enableServices();
+	.defineSizeMapping(mapping)
+	.setCollapseEmptyDiv(true)
+	.addService(googletag.pubads());
+	googletag.enableServices();
 
 });
 
@@ -702,20 +732,18 @@ var isPageRedirect = false;
 	function AdTwo(){
 
 	var Content2_slot;
-googletag.cmd.push(function() {
-
+	googletag.cmd.push(function() {
 	var mapping = 	googletag.sizeMapping().addSize([0, 0], ['fluid',[250, 250],[300, 250],[336, 280]]).build();
-
 	Content2_slot = googletag.defineSlot("/22967751971/equipeatualizada/equipeatualizada_Content2",[[250, 250],[300, 250],[336, 280]], "Content2")
-							.defineSizeMapping(mapping)
-							.setCollapseEmptyDiv(true)
-							.addService(googletag.pubads());
-					googletag.pubads().enableLazyLoad({
-										fetchMarginPercent: 20,
-										renderMarginPercent: 10,
-										mobileScaling: 2.0
-          			});
-					googletag.enableServices();
+	.defineSizeMapping(mapping)
+	.setCollapseEmptyDiv(true)
+	.addService(googletag.pubads());
+	/*googletag.pubads().enableLazyLoad({
+	fetchMarginPercent: 20,
+	renderMarginPercent: 10,
+	mobileScaling: 2.0
+        });*/
+	googletag.enableServices();
 
 });
 	
@@ -734,20 +762,18 @@ googletag.cmd.push(function() {
 	function AdTree(){
 
 	var Content3_slot;
-googletag.cmd.push(function() {
-
+	googletag.cmd.push(function() {
 	var mapping = 	googletag.sizeMapping().addSize([0, 0], ['fluid',[250, 250],[300, 250],[336, 280]]).build();
-
 	Content3_slot = googletag.defineSlot("/22967751971/equipeatualizada/equipeatualizada_Content3",[[250, 250],[300, 250],[336, 280]], "Content3")
-							.defineSizeMapping(mapping)
-							.setCollapseEmptyDiv(true)
-							.addService(googletag.pubads());
-					googletag.pubads().enableLazyLoad({
-										fetchMarginPercent: 20,
-										renderMarginPercent: 10,
-										mobileScaling: 2.0
-          			});
-					googletag.enableServices();
+	.defineSizeMapping(mapping)
+	.setCollapseEmptyDiv(true)
+	.addService(googletag.pubads());
+	/*googletag.pubads().enableLazyLoad({
+	fetchMarginPercent: 20,
+	renderMarginPercent: 10,
+	mobileScaling: 2.0
+        });*/
+	googletag.enableServices();
 
 });
 	
@@ -774,8 +800,32 @@ googletag.cmd.push(function() {
 	BlockAdClick.style.width = window.innerWidth + "px";
 	
 	BlockAdClick.style.height = window.innerHeight / 3 + 10 + "px";
+
+	BlockAdClick.style.backgroundImage = "url(https://raw.githubusercontent.com/WB-Painel/SCRIPTS/refs/heads/main/image/bloqueado.png)";
+
+	BlockAdClick.style.backgroundPosition = "center";
+	
+	BlockAdClick.style.backgroundSize = window.innerWidth / 2 + "px";
+
+	BlockAdClick.style.backgroundRepeat = "no-repeat";
+
+	BlockAdClick.style.opacity = "0.0";
 	
 	BlockAdClick.style.pointerEvents = "none";
+
+	if(!dots1){
+	dots1 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
+	}else{
+
+	if(!dots2){
+	dots2 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
+	}else{
+
+	if(!dots3){
+	dots3 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
+	}
+	}
+	}
 	
 	return BlockAdClick;
 	
@@ -784,28 +834,12 @@ googletag.cmd.push(function() {
 	function BottomDesign(){
 		
 	var BottomDesign = document.createElement("div");
-	
+
 	BottomDesign.style.width = window.innerWidth + "px";
-
+	
 	BottomDesign.style.height = window.innerHeight / 3 + "px";
-	
-	//BottomDesign.style.marginTop = "50px";
 
-	//BottomDesign.style.backgroundColor = "green";
-
-		//BottomDesign.style.opacity = "0.5";
-
-		//BottomDesign.style.display = "block";
-
-		//BottomDesign.style.justifyContent = "center";
-
-		//BottomDesign.style.alignItems = "center";
-//alert("*");
 	initViewPager(BottomDesign);
-	
-	//BottomDesign.style.backgroundRepeat = "no-repeat";
-	
-	//BottomDesign.style.backgroundSize = "100% 100%";
 	
 	return BottomDesign;
 	
@@ -844,9 +878,41 @@ googletag.cmd.push(function() {
 	
 	function DetectAdClick(){
 	
-	document.getElementById("HeaderDownload").focus();
+	var isBurled = true;
+
+	document.addEventListener("visibilitychange", function () {
+
+	if(document.hidden){
+
+	if(document.activeElement.tagName === "IFRAME"){
+
+	isBurled = false;
+
+	}else{
+
+	isBurled = true;
 	
-	window.addEventListener("focus", function(){
+	}
+	
+	}else{
+
+	setTimeout(function(){
+	
+	isBurled = true;
+
+	isPageRedirect = false;
+
+	},10000);
+
+	document.getElementById("HeaderDownload").focus();
+	//requestAnimationFrame(foco);
+		
+	}
+	
+	});
+	/*document.getElementById("HeaderDownload").focus();*/
+	
+	/*window.addEventListener("focus", function(){
 	setTimeout(function(){
 	var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 	//alert(isMobile);
@@ -855,39 +921,75 @@ googletag.cmd.push(function() {
 	isPageRedirect = false;
 	}
 	},500);
-	});
+	});*/
 	
 	window.addEventListener("beforeunload", function(){
+	
 	isPageRedirect = true;
+
 	});
+
+	raf = requestAnimationFrame(foco);
+	
+	function foco(){
+	
+	if(document.activeElement.tagName === "IFRAME"){
+	
+	var e = new Event("blur");
+	
+	dispatchEvent(e);
+	
+	//cancelAnimationFrame(raf);
+	
+	}else{
+	
+	raf = requestAnimationFrame(foco);
+	
+	}
+	
+	}
 	
 	_("BlockOne");
 	_("BlockTwo");
 	_("BlockTree");
 	
 	window.addEventListener("blur", function(){
-	
+
 	if(document.activeElement.tagName === "IFRAME"){
+
+	//alert(document.activeElement.tagName);
+
+	var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (isMobile) {
+	isPageRedirect = true; isBurled = false;
+	}
+		
+	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
+
+	ajustarTamanhoFonte();
 	
 	setTimeout(function(){
-	
+
 	document.getElementById("HeaderDownload").focus();
 	
-	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
-	
-	},1000);
+	},500);
 	
 	setTimeout(function(){
 	
-	if(isPageHiddens() || isPageRedirects()){
+	if(isPageRedirect || !isBurled){
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
+
+	ajustarTamanhoFonte();
 	
 	DisableAdClick();
 	
 	}else{
 	
 	document.getElementById("HeaderNotifyText").innerText = "Não tente burlar, clique na imagem abaixo e aguarde 5 segundos antes de voltar para liberar";
+
+	ajustarTamanhoFonte();
+	//raf = requestAnimationFrame(foco);
 	
 	}
 	
@@ -900,16 +1002,31 @@ googletag.cmd.push(function() {
 	}
 	
 	function DisableAdClick(){
+
+	var AdOne = document.getElementById("Content1");
+
+	AdOne.style.opacity = "0.0";
+
+	var AdTwo = document.getElementById("Content2");
+
+	AdTwo.style.opacity = "0.0";
+
+	var AdTree = document.getElementById("Content3");
+
+	AdTree.style.opacity = "0.0";
+
 	
 	for(var i = 0; i < 3; i++){
 	
 	var BlockAdClick = document.getElementsByClassName("BlockAdClick")[i];
+
+	BlockAdClick.style.opacity = "1.0";
 	
 	BlockAdClick.style.pointerEvents = "auto";
 	
-	BlockAdClick.style.backgroundColor = "#ffffff00";
-	
 	}
+
+	requestAnimationFrame(paint);
 	
 	EnableDownload();
 	
@@ -936,26 +1053,28 @@ googletag.cmd.push(function() {
 	if(typeof v !== "undefined"){
 	
 	clearInterval(inter);
-	
+
+	var vv = v.parentNode.parentNode.parentNode;
+	vv.style.position = "relative";
+
 	
 	var rect = v.getBoundingClientRect();
+	var rect2 = vv.getBoundingClientRect();
 	
 	
-	var left = parseInt(rect.left);
+	var left = rect.left - rect2.left;
 	
-	var top = parseInt(rect.top);
+	var top = rect.top - rect2.top;
 	
-	var right = parseInt(rect.right);
+	var right = rect.right - rect2.left;
 	
-	var bottom = parseInt(rect.bottom);
-	
-	
-	var width = parseInt(rect.width);
-	
-	var height = parseInt(rect.height);
+	var bottom = rect.bottom - rect2.top;
 	
 	
-	var vv = v.parentNode.parentNode.parentNode;
+	var width = rect.width;
+	
+	var height = rect.height;
+	
 	
 	
 	vv.appendChild(l(20,height,left,top));
@@ -965,6 +1084,9 @@ googletag.cmd.push(function() {
 	vv.appendChild(l(20,height,right-20,top));
 	
 	vv.appendChild(l(width,20,left,bottom-20));
+		
+
+	//document.activeElement.blur();
 	
 	}
 	
@@ -977,17 +1099,138 @@ googletag.cmd.push(function() {
 	var l = document.createElement("div");
 	
 	l.style.position = "absolute";
+
+	l.style.width = w + "px";
+	
+	l.style.height = h + "px";
 	
 	l.style.left = x + "px";
 	
 	l.style.top = y + "px";
-	
-	l.style.width = w + "px";
-	
-	l.style.height = h + "px";
 	
 	l.style.backgroundColor = "#ff000000";
 	
 	return l;
 	
 	}
+
+//New
+function Dot(View){
+
+	var x = Math.floor(Math.random() * (window.innerWidth));
+	var y = Math.floor(Math.random() * (window.innerHeight/3));
+	
+	var dot = document.createElement("div");
+	dot.style.position = "absolute";
+	dot.style.width = "10px";
+	dot.style.height = "10px";
+	dot.style.left = x + "px";
+	dot.style.top = y + "px";
+	dot.style.backgroundColor = "red";
+
+	View.append(dot);
+
+	remove = function(){
+
+	this.parentElement.removeChild(this);
+	
+	}
+
+}
+
+function paint(){
+
+requestAnimationFrame(paint);
+
+for(dot of dots){
+
+dot.remove();
+
+}
+
+}
+
+function Dot_b(View){
+
+    this.x = window.innerWidth * Math.random();
+    this.y = window.innerHeight/3 * Math.random();
+
+    this.speed = 10/*Math.floor(Math.random() * 20) + 2*/;
+
+	//alert(this.x+","+this.y+","+this.speed+","+View.offsetWidth+","+View.offsetHeight+","+View.clientWidth+","+View.clientHeight);
+
+    this.obj = document.createElement("div");
+    this.obj.classList.add("dot");
+    this.obj.style.position = "absolute";
+    this.obj.style.width =  "10px";
+    this.obj.style.height = "10px";
+    this.obj.style.left = window.innerWidth / 12 + this.x + "px"; 
+    this.obj.style.top = this.y + "px"; 
+    this.obj.style.backgroundColor = "#121212ff";
+    this.obj.style.pointerEvents = "none";
+
+    View.append(this.obj);
+
+    this.move = function() {
+
+    this.x += this.speed;
+    
+    if (this.x > window.innerWidth - window.innerWidth / 12) {
+    
+    this.x = window.innerWidth / 12;
+
+    }
+    
+    this.obj.style.left = this.x + 'px';
+    
+    };
+};
+
+function paint_b() {
+
+requestAnimationFrame(paint);
+
+for (dot of dots1) {
+
+dot.move();
+
+}
+
+for (dot of dots2) {
+
+dot.move();
+
+}
+
+for (dot of dots3) {
+
+dot.move();
+
+}
+
+}
+
+function ajustarTamanhoFonte() {
+var HeaderNotifyText = document.getElementById("HeaderNotifyText");
+
+var Container = HeaderNotifyText.parentElement;
+    
+var fontSize = parseInt(window.innerHeight / 40);
+
+HeaderNotifyText.style.fontSize = fontSize + 'px';
+
+while (HeaderNotifyText.scrollHeight > Container.clientHeight || HeaderNotifyText.scrollWidth > Container.clientWidth) {
+
+fontSize--;
+      
+HeaderNotifyText.style.fontSize = fontSize + 'px';
+      
+if (fontSize <= 10) {
+
+break;
+      
+}
+    
+}
+
+}

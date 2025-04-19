@@ -1021,7 +1021,7 @@ var raf;
 	
 	}
 
-	//requestAnimationFrame(paint);
+	requestAnimationFrame(paint);
 	
 	EnableDownload();
 	
@@ -1110,7 +1110,7 @@ var raf;
 	}
 
 //New
-function Dot(View){
+function Dot1(View){
 
 	var x = Math.floor(Math.random() * (window.innerWidth));
 	var y = Math.floor(Math.random() * (window.innerHeight/3));
@@ -1133,7 +1133,7 @@ function Dot(View){
 
 }
 
-function paint(){
+function paint1(){
 
 requestAnimationFrame(paint);
 
@@ -1145,7 +1145,7 @@ dot.remove();
 
 }
 
-function Dot2(View){
+function Dot(View){
 
     this.x = window.innerWidth * Math.random();
     this.y = window.innerHeight/3 * Math.random();
@@ -1181,7 +1181,7 @@ function Dot2(View){
     };
 };
 
-function paint2() {
+function paint() {
 
 requestAnimationFrame(paint);
 

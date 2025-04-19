@@ -502,6 +502,8 @@ var raf;
 	HeaderNotifyText.style.color = "white";
 	
 	HeaderNotifyText.innerText = "Clique em algum anuncio para liberar";
+
+	ajustarTamanhoFonte();
 	
 	HeaderNotifyText.addEventListener("selectstart", function(f){
 	f.preventDefault();
@@ -960,6 +962,8 @@ var raf;
 	//alert(document.activeElement.tagName);
 	
 	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
+
+	ajustarTamanhoFonte();
 	
 	setTimeout(function(){
 
@@ -972,6 +976,8 @@ var raf;
 	if(isPageRedirect || !isBurled){
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
+
+	ajustarTamanhoFonte();
 	
 	DisableAdClick();
 	
@@ -979,6 +985,7 @@ var raf;
 	
 	document.getElementById("HeaderNotifyText").innerText = "Não tente burlar, clique na imagem abaixo e aguarde 5 segundos antes de voltar para liberar";
 
+	ajustarTamanhoFonte();
 	//raf = requestAnimationFrame(foco);
 	
 	}
@@ -1161,6 +1168,30 @@ for (dot of dots3) {
 
 dot.move();
 
+}
+
+}
+
+function ajustarTamanhoFonte() {
+var HeaderNotifyText = document.getElementById("HeaderNotifyText");
+var Container = HeaderNotifyText.parentElement;
+    
+var fontSize = parseInt(window.innerHeight / 40);
+
+HeaderNotify.style.fontSize = fontSize + 'px';
+
+while (HeaderNotifyText.scrollHeight > Container.clientHeight || HeaderNotifyText.scrollWidth > Container.clientWidth) {
+
+fontSize--;
+      
+HeaderNotifyText.style.fontSize = fontSize + 'px';
+      
+if (fontSize <= 10) {
+
+break;
+      
+}
+    
 }
 
 }

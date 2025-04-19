@@ -1121,6 +1121,7 @@ function Dot(View){
 	dot.style.height = "10px";
 	dot.style.left = x + "px";
 	dot.style.top = y + "px";
+	dot.style.backgroundColor = "red";
 
 	View.append(dot);
 	

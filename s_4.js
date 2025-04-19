@@ -527,7 +527,29 @@ var raf;
 	}
 	
 	function getCookie(Name){
+
+	if(Name === "GoogleAdBanner" && !document.cookie.includes(Name)){
+
+	setCookie(Name,1);
 	
+	}
+	
+	var cookies = document.cookie.split(';');
+	
+	for (var i = 0; i < cookies.length; i++) {
+	
+        var parts = cookies[i].split('=');
+	
+        if (parts[0].trim() === Name) {
+        
+	return parts[1];
+	
+        }
+	
+	}
+	
+	return null;
+	/*
 	var Cookie = document.cookie;
 	
 	if(Cookie.includes(Name)){
@@ -566,7 +588,7 @@ var raf;
 	
 	}
 	
-	return Cookie;
+	return Cookie;*/
 	
 	}
 	

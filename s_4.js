@@ -1145,7 +1145,7 @@ dot.remove();
 
 }
 
-function Dott(View){
+function Dot2(View){
 
     this.x = window.innerWidth * Math.random();
     this.y = window.innerHeight/3 * Math.random();
@@ -1181,7 +1181,7 @@ function Dott(View){
     };
 };
 
-function paint() {
+function paint2() {
 
 requestAnimationFrame(paint);
 

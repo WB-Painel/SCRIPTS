@@ -814,17 +814,17 @@ var raf;
 	BlockAdClick.style.pointerEvents = "none";
 
 	if(dots1.length < 50){
-	CreateDot(View, dots1);
+	CreateDot(BlockAdClick, dots1);
 	//dots1 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}else{
 
 	if(dots2.length < 50){
-	CreateDot(View, dots2);
+	CreateDot(BlockAdClick, dots2);
 	//dots2 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}else{
 
 	if(dots3.length < 50){
-	CreateDot(View, dots3);
+	CreateDot(BlockAdClick, dots3);
 	//dots3 = Array.apply(null, Array(30)).map(a => new Dot(BlockAdClick));
 	}
 	}

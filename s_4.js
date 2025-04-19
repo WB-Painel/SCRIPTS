@@ -1110,7 +1110,7 @@ var raf;
 	}
 
 //New
-function Dot1(View){
+/*function Dot1(View){
 
 	var x = Math.floor(Math.random() * (window.innerWidth));
 	var y = Math.floor(Math.random() * (window.innerHeight/3));
@@ -1143,7 +1143,7 @@ dot.remove();
 
 }
 
-}
+}*/
 
 function Dot(View){
 

@@ -1171,7 +1171,7 @@ for(dot of dots2){
 dot.removeDot();
 }
 for(dot of dots3){
-dot.removeDot();
+//dot.removeDot();
 }
 
 }

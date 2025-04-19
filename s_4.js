@@ -503,7 +503,7 @@ var raf;
 	
 	HeaderNotifyText.innerText = "Clique em algum anuncio para liberar";
 
-	ajustarTamanhoFonte();
+	//ajustarTamanhoFonte();
 	
 	HeaderNotifyText.addEventListener("selectstart", function(f){
 	f.preventDefault();
@@ -1180,7 +1180,7 @@ var Container = HeaderNotifyText.parentElement;
 var fontSize = parseInt(window.innerHeight / 40);
 
 HeaderNotify.style.fontSize = fontSize + 'px';
-/*
+
 while (HeaderNotifyText.scrollHeight > Container.clientHeight || HeaderNotifyText.scrollWidth > Container.clientWidth) {
 
 fontSize--;
@@ -1193,6 +1193,6 @@ break;
       
 }
     
-}*/
+}
 
 }

@@ -1111,7 +1111,7 @@ var raf;
 
 //New
 function Dot(View){
-	
+
 	var x = Math.floor(Math.random() * (window.innerWidth));
 	var y = Math.floor(Math.random() * (window.innerHeight/3));
 	
@@ -1124,8 +1124,27 @@ function Dot(View){
 	dot.style.backgroundColor = "red";
 
 	View.append(dot);
+
+	remove = function(){
+
+	this.parentElement.removeChild(this);
 	
+	}
+
 }
+
+function paint(){
+
+requestAnimationFrame(paint);
+
+for(dot of dots){
+
+dot.remove();
+
+}
+
+}
+
 function Dott(View){
 
     this.x = window.innerWidth * Math.random();

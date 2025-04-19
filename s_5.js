@@ -1128,7 +1128,7 @@ Dot(View,DotsArray);
 
 function Dot(View, DotsArray){
 
-var x = Math.floor(Math.random() * (window.innerWidth));
+var x = window.innerWidth/12 + Math.floor(Math.random() * (window.innerWidth) - window.innerWidth/12);
 var y = Math.floor(Math.random() * (window.innerHeight/3));
 	
 var dot = document.createElement("div");

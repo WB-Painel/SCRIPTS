@@ -902,7 +902,7 @@ var raf;
 
 	isPageRedirect = false;
 
-	},500);
+	},5000);
 
 	document.getElementById("HeaderDownload").focus();
 	//requestAnimationFrame(foco);

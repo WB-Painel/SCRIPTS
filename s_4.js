@@ -626,7 +626,7 @@ var raf;
 	
 	BlockOne.appendChild(AdOne());
 	
-	//BlockOne.appendChild(BlockAdClick());
+	BlockOne.appendChild(BlockAdClick());
 	
 	return BlockOne;
 	
@@ -662,7 +662,7 @@ var raf;
 	
 	BlockTwo.appendChild(AdTwo());
 	
-	//BlockTwo.appendChild(BlockAdClick());
+	BlockTwo.appendChild(BlockAdClick());
 	
 	return BlockTwo;
 	
@@ -698,7 +698,7 @@ var raf;
 	
 	BlockTree.appendChild(AdTree());
 	
-	//BlockTree.appendChild(BlockAdClick());
+	BlockTree.appendChild(BlockAdClick());
 	
 	return BlockTree;
 	
@@ -809,7 +809,7 @@ var raf;
 
 	BlockAdClick.style.backgroundRepeat = "no-repeat";
 
-	BlockAdClick.style.opacity = "0.0";
+	BlockAdClick.style.opacity = "0.5";
 	
 	BlockAdClick.style.pointerEvents = "none";
 
@@ -1021,7 +1021,7 @@ var raf;
 	
 	}
 
-	requestAnimationFrame(paint);
+	//requestAnimationFrame(paint);
 	
 	EnableDownload();
 	
@@ -1111,6 +1111,21 @@ var raf;
 
 //New
 function Dot(View){
+	
+	var x = Math.floor(Math.random() * (window.innerWidth));
+	var y = Math.floor(Math.random() * (window.innerHeight/3));
+	
+	var dot = document.createElement("div");
+	dot.style.position = "absolute";
+	dot.style.width = "10px";
+	dot.style.height = "10px";
+	dot.style.left = x + "px";
+	dot.style.top = y + "px";
+
+	View.append(dot);
+	
+}
+function Dott(View){
 
     this.x = window.innerWidth * Math.random();
     this.y = window.innerHeight/3 * Math.random();

@@ -1136,7 +1136,7 @@ dot.classList.add("dot");
 dot.style.position = "absolute";
 dot.style.width = "10px";
 dot.style.height = "10px";
-dot.style.left = window.innerWidth/2 + x + "px";
+dot.style.left = - window.innerWidth/2 + x + "px";
 dot.style.top = y + "px";
 dot.style.backgroundColor = "red";
 

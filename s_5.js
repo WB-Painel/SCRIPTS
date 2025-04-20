@@ -11,6 +11,9 @@ var ViewOne = false;
     init();
 	
 	function init(){
+
+	try{
+	
     var div = document.createElement("center");
     
 	div.id = "DownloadBlock";
@@ -160,7 +163,13 @@ var ViewOne = false;
 	
 	if(ViewOne){
 	//alert('one');
-	document.getElementById('ViewPager').scrollIntoView();
+	//document.getElementById('ViewPager').scrollIntoView();
+	document.getElementById('ViewPager').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+		
+	}
+
+	}catch(err){
+	alert(err);
 	}
 	
 	}

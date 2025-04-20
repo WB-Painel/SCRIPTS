@@ -1128,7 +1128,7 @@ Dot(View,DotsArray);
 
 function Dot(View, DotsArray){
 
-var x = window.innerWidth/12 + Math.floor(Math.random() * (window.innerWidth) - window.innerWidth/12);
+var x = Math.floor(Math.random() * (window.innerWidth - window.innerWidth/12));
 var y = Math.floor(Math.random() * (window.innerHeight/3));
 	
 var dot = document.createElement("div");
@@ -1136,7 +1136,7 @@ dot.classList.add("dot");
 dot.style.position = "absolute";
 dot.style.width = "10px";
 dot.style.height = "10px";
-dot.style.left = x + "px";
+dot.style.left = window.innerWidth/12 + x + "px";
 dot.style.top = y + "px";
 dot.style.backgroundColor = "red";
 

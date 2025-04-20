@@ -6,6 +6,8 @@ var dots1 = [], dots2 = [], dots3 = [];
 
 var raf;
 
+var ViewOne = false;
+
     init();
 	
 	function init(){
@@ -55,11 +57,11 @@ var raf;
 	
 	var Cookie = getCookie("GoogleAdBanner");
 
-	if(Cookie == "null"){
+	/*if(Cookie == "null"){
 
 	Cookie = "1";
 	
-	}
+	}*/
 	
 	var BlockOne_ = BlockOne();
 	
@@ -153,6 +155,10 @@ var raf;
 	DownloadBlock.appendChild(BottomDesign_);
 	
 	DisableScroll();
+
+	if(ViewOne){
+	document.getElementById('ViewPager').scrollIntoView();
+	}
 	
 	}
 
@@ -535,6 +541,8 @@ var raf;
 	if(Name === "GoogleAdBanner" && !document.cookie.includes(Name)){
 
 	setCookie(Name,1);
+
+	ViewOne = true;
 	
 	}
 	

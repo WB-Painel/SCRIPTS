@@ -159,8 +159,8 @@ var ViewOne = false;
 	getCookie("VPPV");
 	
 	if(ViewOne){
-	alert('one');
-	//document.getElementById('ViewPager').scrollIntoView();
+	//alert('one');
+	document.getElementById('ViewPager').scrollIntoView();
 	}
 	
 	}
@@ -861,7 +861,7 @@ var ViewOne = false;
 	
 	BottomDesign.style.height = window.innerHeight / 3 + "px";
 
-	//initViewPager(BottomDesign);
+	initViewPager(BottomDesign);
 	
 	return BottomDesign;
 	

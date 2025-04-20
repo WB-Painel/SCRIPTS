@@ -541,6 +541,12 @@ var ViewOne = false;
 	if(Name === "GoogleAdBanner" && !document.cookie.includes(Name)){
 
 	setCookie(Name,1);
+	
+	}
+
+	if(Name === "VPPV" && !document.cookie.includes(Name)){
+
+	setCookie(Name,1);
 
 	ViewOne = true;
 	

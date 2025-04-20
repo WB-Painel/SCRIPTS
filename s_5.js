@@ -156,6 +156,8 @@ var ViewOne = false;
 	
 	DisableScroll();
 
+	getCookie("VPPV");
+	
 	if(ViewOne){
 	alert('one');
 	//document.getElementById('ViewPager').scrollIntoView();

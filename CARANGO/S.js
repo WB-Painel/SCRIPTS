@@ -841,7 +841,7 @@ var ViewOne = false;
 	}
 	}
 
-	requestAnimationFrame(paint);
+	//requestAnimationFrame(paint);
 	
 	return BlockAdClick;
 	

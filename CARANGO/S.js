@@ -963,12 +963,12 @@ var ViewOne = false;
 	function foco(){
 	
 	if(document.activeElement.tagName === "IFRAME"){
-	
+
 	var e = new Event("blur");
 	
 	dispatchEvent(e);
 	
-	//cancelAnimationFrame(raf);
+	cancelAnimationFrame(raf);
 	
 	}else{
 	
@@ -984,6 +984,8 @@ var ViewOne = false;
 	
 	window.addEventListener("blur", function(){
 
+	alert(document.activeElement.tagName);
+	
 	if(document.activeElement.tagName === "IFRAME"){
 
 	//alert(document.activeElement.tagName);

@@ -923,6 +923,8 @@ var ViewOne = false;
 	
 	}else{
 
+	alert("Android");
+
 	ShutDown = 500;
 
 	}

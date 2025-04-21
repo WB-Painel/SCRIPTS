@@ -820,7 +820,7 @@ var ViewOne = false;
 
 	BlockAdClick.style.backgroundRepeat = "no-repeat";
 
-	BlockAdClick.style.opacity = "0.5";
+	BlockAdClick.style.opacity = "0.0";
 	
 	BlockAdClick.style.pointerEvents = "none";
 
@@ -1162,7 +1162,7 @@ dot.style.width = "10px";
 dot.style.height = "10px";
 dot.style.left = window.innerWidth/4 + x + "px";
 dot.style.top = window.innerHeight/24 + y + "px";
-dot.style.backgroundColor = "red";
+dot.style.backgroundColor = "#121212ff";
 
 View.append(dot);
 

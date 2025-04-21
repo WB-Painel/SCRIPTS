@@ -921,7 +921,7 @@ var ViewOne = false;
 	
 	}else{
 
-	ShutDown = 1000;
+	ShutDown = 10000;
 
 	}
 

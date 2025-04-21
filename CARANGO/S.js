@@ -519,7 +519,7 @@ var ViewOne = false;
 	
 	HeaderNotifyText.style.color = "white";
 	
-	HeaderNotifyText.innerText = "Clique em algum anuncio para liberar";
+	HeaderNotifyText.innerText = "Clique em algum anuncio para liberar e aguarde 10 segundos na página do anunciante";
 
 	HeaderNotifyText.style.width = window.innerWidth/1 - window.innerWidth/4 + "px";
 	
@@ -917,15 +917,11 @@ var ViewOne = false;
 	var isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent);
         if (isApple) {
 
-	alert("Apple");
-	
 	ShutDown = 10000;
 	
 	}else{
 
-	alert("Android");
-
-	ShutDown = 500;
+	ShutDown = 1000;
 
 	}
 

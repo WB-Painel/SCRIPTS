@@ -519,7 +519,7 @@ var ViewOne = false;
 	
 	HeaderNotifyText.style.color = "white";
 	
-	HeaderNotifyText.innerText = "Clique em algum anuncio para liberar e aguarde 10 segundos na página do anunciante";
+	HeaderNotifyText.innerText = "Clique em algum anuncio e aguarde 10 segundos na página do anunciante para liberar";
 
 	HeaderNotifyText.style.width = window.innerWidth/1 - window.innerWidth/4 + "px";
 	

@@ -984,7 +984,7 @@ var ViewOne = false;
 	
 	window.addEventListener("blur", function(){
 
-	alert(document.activeElement.tagName);
+	alert(document.activeElement);
 	
 	if(document.activeElement.tagName === "IFRAME"){
 

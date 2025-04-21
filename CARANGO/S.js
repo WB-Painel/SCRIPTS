@@ -917,6 +917,8 @@ var ViewOne = false;
 	var isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent);
         if (isApple) {
 
+	alert("Apple");
+	
 	ShutDown = 10000;
 	
 	}else{

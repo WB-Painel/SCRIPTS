@@ -927,13 +927,26 @@ var ViewOne = false;
 	
 	}else{
 
+	var ShutDown = 0;
+	
+	var isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (isApple) {
+
+	ShutDown = 10000;
+	
+	}else{
+
+	ShutDown = 500;
+
+	}
+
 	setTimeout(function(){
 	
 	isBurled = true;
 
 	isPageRedirect = false;
 
-	},500);
+	},ShutDown);
 
 	document.getElementById("HeaderDownload").focus();
 	//requestAnimationFrame(foco);
@@ -990,10 +1003,10 @@ var ViewOne = false;
 
 	//alert(document.activeElement.tagName);
 
-	var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+	/*var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
         if (isMobile) {
 	isPageRedirect = true; isBurled = false;
-	}
+	}*/
 		
 	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
 

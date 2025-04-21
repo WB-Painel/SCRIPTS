@@ -898,7 +898,7 @@ var ViewOne = false;
 
 	document.addEventListener("visibilitychange", function () {
 
-	if(document.hidden){
+	if(document.hidden || document.msHidden || document.webkitHidden || document.mozHidden){
 
 	if(document.activeElement.tagName === "IFRAME"){
 

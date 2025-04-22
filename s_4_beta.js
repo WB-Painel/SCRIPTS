@@ -733,9 +733,8 @@ var raf;
 });
 	var sc = document.createElement("script");
 	sc.innerHTML = "googletag.cmd.push(function() { googletag.display('Content1'); });";
-	},2500);
-		
 	AdOne.appendChild(sc);
+	},2500);
 	
 	return AdOne;
 	

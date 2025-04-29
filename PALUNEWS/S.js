@@ -732,7 +732,7 @@ var ViewOne = false;
 	
 	function AdOne(){
 
-	var Content1_slot;
+	/*var Content1_slot;
   googletag.cmd.push(function() {
 	var mapping = 	googletag.sizeMapping().addSize([0, 0], ['fluid',[250, 250],[300, 250],[336, 280]]).build();
 	Content1_slot = googletag.defineSlot("/23275015135/carangoweb/carangoweb_Content1",[[250, 250],[300, 250],[336, 280]], "Content1")
@@ -740,13 +740,13 @@ var ViewOne = false;
 	.setCollapseEmptyDiv(true)
 	.addService(googletag.pubads());
   googletag.enableServices();
-  });
+  });*/
 
 	var AdOne = document.createElement("div");
-	AdOne.id = "Content1"; 
+	AdOne.id = "div-gpt-ad-1825455-1"; 
 	
 	var sc = document.createElement("script");
-	sc.innerHTML = "googletag.cmd.push(function() { googletag.display('Content1'); });";
+	sc.innerHTML = "googletag.cmd.push(function() { googletag.display('div-gpt-ad-1825455-1'); });";
 	
 	AdOne.appendChild(sc);
 	
@@ -755,7 +755,7 @@ var ViewOne = false;
 	}
 	
 	function AdTwo(){
-	var Content2_slot;
+	/*var Content2_slot;
 	googletag.cmd.push(function() {
 	var mapping =	googletag.sizeMapping().addSize([0, 0], ['fluid',[250, 250],[300, 250],[336, 280]]).build();
 	Content2_slot = googletag.defineSlot("/23275015135/carangoweb/carangoweb_Content2",[[250, 250],[300, 250],[336, 280]], "Content2")
@@ -763,13 +763,13 @@ var ViewOne = false;
 	.setCollapseEmptyDiv(true)
 	.addService(googletag.pubads());
 	googletag.enableServices();
-  });
+  });*/
 	
 	var AdTwo = document.createElement("div");
-	AdTwo.id = "Content2"; 
+	AdTwo.id = "div-gpt-ad-1825455-2"; 
 	
 	var sc = document.createElement("script");
-	sc.innerHTML = "googletag.cmd.push(function() { googletag.display('Content2'); });";
+	sc.innerHTML = "googletag.cmd.push(function() { googletag.display('div-gpt-ad-1825455-2'); });";
 	
 	AdTwo.appendChild(sc);
 	
@@ -778,7 +778,7 @@ var ViewOne = false;
 	}
 	
 	function AdTree(){
-	var Content3_slot;
+	/*var Content3_slot;
 	googletag.cmd.push(function() {
 	var mapping = 	googletag.sizeMapping().addSize([0, 0], ['fluid',[250, 250],[300, 250],[336, 280]]).build();
 	Content3_slot = googletag.defineSlot("/23275015135/carangoweb/carangoweb_Content3",[[250, 250],[300, 250],[336, 280]], "Content3")
@@ -786,13 +786,13 @@ var ViewOne = false;
 	.setCollapseEmptyDiv(true)
 	.addService(googletag.pubads());
 	googletag.enableServices();
-});
+});*/
 	
 	var AdTree = document.createElement("div");
-	AdTree.id = "Content3"; 
+	AdTree.id = "div-gpt-ad-1825455-3"; 
 	
 	var sc = document.createElement("script");
-	sc.innerHTML = "googletag.cmd.push(function() { googletag.display('Content3'); });";
+	sc.innerHTML = "googletag.cmd.push(function() { googletag.display('div-gpt-ad-1825455-3'); });";
 	
 	AdTree.appendChild(sc);
 	
@@ -984,7 +984,7 @@ var ViewOne = false;
 	
 	window.addEventListener("blur", function(){
 
-	alert(document.activeElement);
+	//alert(document.activeElement);
 	
 	if(document.activeElement.tagName === "IFRAME"){
 

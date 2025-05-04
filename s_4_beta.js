@@ -36,7 +36,7 @@ var raf;
     document.body.appendChild(div);
 
 		//
-var logs = document.createElement('h1');
+/*var logs = document.createElement('h1');
 		logs.id = "logs";
     logs.style.position = 'fixed';
     logs.style.zIndex = '999999';
@@ -46,7 +46,7 @@ var logs = document.createElement('h1');
     logs.style.fontFamily = 'monospace';
     logs.innerText = '#';
     
-    document.body.append(logs);
+    document.body.append(logs);*/
 		//
     
     
@@ -534,16 +534,16 @@ var logs = document.createElement('h1');
 (function loadAdManagerScript() {
     const scriptSrc = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
 
-	var Logs = document.getElementById("logs");
+	//var Logs = document.getElementById("logs");
     // Verifica se o script já está presente
     if (!document.querySelector(`script[src="${scriptSrc}"]`)) {
         const script = document.createElement("script");
         script.src = scriptSrc;
         script.async = true;
         document.head.appendChild(script);
-        Logs.innerText = "Ad Manager script adicionado ao <head>.";
+        //Logs.innerText = "Ad Manager script adicionado ao <head>.";
     } else {
-        Logs.innerText = "Ad Manager script já está presente.";
+        //Logs.innerText = "Ad Manager script já está presente.";
     }
 })();
 

@@ -51,7 +51,7 @@ var raf;
 	
 	DownloadBlock.appendChild(HeaderNotify_);
 	
-	//initGoogleAds();
+	initGoogleAds();
 	
 	var Cookie = getCookie("GoogleAdBanner");
 
@@ -520,7 +520,7 @@ var raf;
 	var sc = document.createElement("script");
 	sc.setAttribute("async","");
 	sc.setAttribute("src","https://securepubads.g.doubleclick.net/tag/js/gpt.js");
-	document.body.appendChild(sc);
+	document.head.append(sc);
 	//document.getElementById("DownloadBlock").appendChild(sc);
 	
 	}

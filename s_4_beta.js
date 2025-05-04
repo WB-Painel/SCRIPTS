@@ -708,8 +708,8 @@ var raf;
 	function AdOne(){
 
 	var Content1_slot;
-		alert("cmd");
-		window.googletag = window.googletag || {cmd: []};
+	
+	window.googletag = window.googletag || {cmd: []};
 		
 	googletag.cmd.push(function() {
 		
@@ -720,8 +720,7 @@ var raf;
 	.addService(googletag.pubads());
 	googletag.enableServices();
 
-		googletag.pubads().refresh([Content1_slot]);
-		alert("1");
+	googletag.pubads().refresh([Content1_slot]);
 
 });
 
@@ -753,6 +752,8 @@ var raf;
         });*/
 	googletag.enableServices();
 
+	googletag.pubads().refresh([Content2_slot]);
+
 });
 	
 	var AdTwo = document.createElement("div");
@@ -782,6 +783,8 @@ var raf;
 	mobileScaling: 2.0
         });*/
 	googletag.enableServices();
+
+	googletag.pubads().refresh([Content3_slot]);
 
 });
 	

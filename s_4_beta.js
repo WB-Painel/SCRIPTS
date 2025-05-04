@@ -65,7 +65,7 @@ var raf;
 	
 	DownloadBlock.appendChild(HeaderNotify_);
 	
-	initGoogleAds();
+	//initGoogleAds();
 
 		//loadAdManagerScript();
 	
@@ -79,8 +79,9 @@ var raf;
 
 	const waitForGPT = setInterval(() => {
 	
-	if (window.googletag && googletag.apiReady) {
-
+	/*if (window.googletag && googletag.apiReady) {*/
+	if (window.googletag && googletag.cmd && typeof googletag.cmd.push === "function") {
+      
 	logs.innerText = "Carregado.";
 	
         clearInterval(waitForGPT);

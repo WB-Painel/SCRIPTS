@@ -712,13 +712,16 @@ var raf;
 		window.googletag = window.googletag || {cmd: []};
 		
 	googletag.cmd.push(function() {
-		alert("1");
+		
 	var mapping = 	googletag.sizeMapping().addSize([0, 0], ['fluid',[250, 250],[300, 250],[336, 280]]).build();
-	Content1_slot = googletag.defineSlot("/22967751971/equipeatualizada/equipeatualizada_Content1",[[250, 250],[300, 250],[336, 280]], "Content1")
+	var Content1_slot = googletag.defineSlot("/22967751971/equipeatualizada/equipeatualizada_Content1",[[250, 250],[300, 250],[336, 280]], "Content1")
 	.defineSizeMapping(mapping)
 	.setCollapseEmptyDiv(true)
 	.addService(googletag.pubads());
 	googletag.enableServices();
+
+		googletag.pubads().refresh([Content1_slot]);
+		alert("1");
 
 });
 

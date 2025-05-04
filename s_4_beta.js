@@ -53,7 +53,7 @@ var raf;
 	
 	//initGoogleAds();
 
-		loadAdManagerScript();
+		//loadAdManagerScript();
 	
 	var Cookie = getCookie("GoogleAdBanner");
 

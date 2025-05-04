@@ -6,7 +6,11 @@ var dots1, dots2, dots3;
 
 var raf;
 
+try{
     init();
+}catch(e){
+	alert(e);
+}
 	
 	function init(){
     var div = document.createElement("center");
@@ -65,7 +69,7 @@ var raf;
 	
 	DownloadBlock.appendChild(HeaderNotify_);
 	
-	initGoogleAds();
+	//initGoogleAds();
 
 		//loadAdManagerScript();
 	
@@ -81,7 +85,7 @@ var raf;
 	
 	if (window.googletag && googletag.apiReady) {
 	//if (window.googletag && googletag.cmd && typeof googletag.cmd.push === "function") {
-
+	alert("*");
 	//logs.innerText = "Carregado...";
 	
         clearInterval(waitForGPT);

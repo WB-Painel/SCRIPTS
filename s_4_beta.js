@@ -707,7 +707,30 @@ var raf;
 	
 	function AdOne(){
 
-	var Content1_slot;
+	
+  var Content1_slot;
+
+  googletag.cmd.push(function() {
+    var mapping = googletag.sizeMapping()
+      .addSize([0, 0], ['fluid', [250, 250], [300, 250], [336, 280]])
+      .build();
+      
+    Content1_slot = googletag.defineSlot("/22967751971/equipeatualizada/equipeatualizada_Content1", [[250, 250], [300, 250], [336, 280]], "Content1")
+      .defineSizeMapping(mapping)
+      .setCollapseEmptyDiv(true)
+      .addService(googletag.pubads());
+
+    googletag.enableServices();
+    googletag.display('Content1');
+    googletag.pubads().refresh([Content1_slot]);
+  });
+
+  var AdOne = document.createElement("div");
+  AdOne.id = "Content1";
+  return AdOne;
+	
+		
+	/*var Content1_slot;
 	
 	googletag.cmd.push(function() {
 		
@@ -730,7 +753,7 @@ var raf;
 	
 	AdOne.appendChild(sc);
 	
-	return AdOne;
+	return AdOne;*/
 	
 	}
 	

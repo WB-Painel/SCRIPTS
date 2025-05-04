@@ -765,6 +765,8 @@ try{
 	.addService(googletag.pubads());
 	googletag.enableServices();
 
+		alert("$");
+
 	//googletag.pubads().refresh([Content1_slot]);
 
 });

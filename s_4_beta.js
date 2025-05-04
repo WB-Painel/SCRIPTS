@@ -65,7 +65,7 @@ var raf;
 	
 	DownloadBlock.appendChild(HeaderNotify_);
 	
-	//initGoogleAds();
+	initGoogleAds();
 
 		//loadAdManagerScript();
 	
@@ -79,12 +79,10 @@ var raf;
 
 	const waitForGPT = setInterval(() => {
 	
-	/*if (window.googletag && googletag.apiReady) {*/
-	if (window.googletag && googletag.cmd && typeof googletag.cmd.push === "function") {
+	if (window.googletag && googletag.apiReady) {
+	//if (window.googletag && googletag.cmd && typeof googletag.cmd.push === "function") {
 
-	setTimeout(function(){
-	
-	logs.innerText = "Carregado..";
+	//logs.innerText = "Carregado...";
 	
         clearInterval(waitForGPT);
 	
@@ -180,8 +178,6 @@ var raf;
 	DownloadBlock.appendChild(BottomDesign_);
 	
 	DisableScroll();
-
-	},1000);
 	
 	}
 

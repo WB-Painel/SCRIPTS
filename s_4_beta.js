@@ -69,7 +69,7 @@ try{
 	
 	DownloadBlock.appendChild(HeaderNotify_);
 	
-	//initGoogleAds();
+	initGoogleAds();
 
 		//loadAdManagerScript();
 	
@@ -85,7 +85,7 @@ try{
 	
 	if (window.googletag && googletag.apiReady) {
 	//if (window.googletag && googletag.cmd && typeof googletag.cmd.push === "function") {
-	alert("*");
+	
 	//logs.innerText = "Carregado...";
 	
         clearInterval(waitForGPT);
@@ -764,8 +764,6 @@ try{
 	.setCollapseEmptyDiv(true)
 	.addService(googletag.pubads());
 	googletag.enableServices();
-
-		alert("$");
 
 	//googletag.pubads().refresh([Content1_slot]);
 

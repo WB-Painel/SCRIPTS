@@ -709,7 +709,9 @@ var raf;
 
 	var Content1_slot;
 		alert("cmd");
-	/*googletag.cmd.push(function() {
+		window.googletag = window.googletag || {cmd: []};
+		
+	googletag.cmd.push(function() {
 		alert("1");
 	var mapping = 	googletag.sizeMapping().addSize([0, 0], ['fluid',[250, 250],[300, 250],[336, 280]]).build();
 	Content1_slot = googletag.defineSlot("/22967751971/equipeatualizada/equipeatualizada_Content1",[[250, 250],[300, 250],[336, 280]], "Content1")
@@ -718,7 +720,7 @@ var raf;
 	.addService(googletag.pubads());
 	googletag.enableServices();
 
-});*/
+});
 
 	var AdOne = document.createElement("div");
 	AdOne.id = "Content1"; 

@@ -81,7 +81,9 @@ var raf;
 	
 	/*if (window.googletag && googletag.apiReady) {*/
 	if (window.googletag && googletag.cmd && typeof googletag.cmd.push === "function") {
-      
+
+	setTimeout(function(){
+	
 	logs.innerText = "Carregado..";
 	
         clearInterval(waitForGPT);
@@ -179,6 +181,8 @@ var raf;
 	
 	DisableScroll();
 
+	},1000);
+	
 	}
 
 	},50);

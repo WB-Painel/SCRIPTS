@@ -52,6 +52,8 @@ var raf;
 	DownloadBlock.appendChild(HeaderNotify_);
 	
 	//initGoogleAds();
+
+		loadAdManagerScript();
 	
 	var Cookie = getCookie("GoogleAdBanner");
 
@@ -514,13 +516,28 @@ var raf;
 	return HeaderNotifyText;
 	
 	}
-	
+
+(function loadAdManagerScript() {
+    const scriptSrc = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+
+    // Verifica se o script já está presente
+    if (!document.querySelector(`script[src="${scriptSrc}"]`)) {
+        const script = document.createElement("script");
+        script.src = scriptSrc;
+        script.async = true;
+        document.head.appendChild(script);
+        alert("Ad Manager script adicionado ao <head>.");
+    } else {
+        alert("Ad Manager script já está presente.");
+    }
+})();
+
 	function initGoogleAds(){
-	    
-	var sc = document.createElement("script");
+		
+	/*var sc = document.createElement("script");
 	sc.setAttribute("async","");
 	sc.setAttribute("src","https://securepubads.g.doubleclick.net/tag/js/gpt.js");
-	document.head.append(sc);
+	document.head.append(sc);*/
 	//document.getElementById("DownloadBlock").appendChild(sc);
 	
 	}

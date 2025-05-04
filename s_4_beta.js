@@ -718,7 +718,7 @@ var raf;
 	.addService(googletag.pubads());
 	googletag.enableServices();
 
-	//googletag.pubads().refresh([Content1_slot]);
+	googletag.pubads().refresh([Content1_slot]);
 
 });
 
@@ -750,7 +750,7 @@ var raf;
         });*/
 	googletag.enableServices();
 
-	//googletag.pubads().refresh([Content2_slot]);
+	googletag.pubads().refresh([Content2_slot]);
 
 });
 	
@@ -782,7 +782,7 @@ var raf;
         });*/
 	googletag.enableServices();
 
-	//googletag.pubads().refresh([Content3_slot]);
+	googletag.pubads().refresh([Content3_slot]);
 
 });
 	

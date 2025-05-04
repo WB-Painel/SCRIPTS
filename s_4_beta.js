@@ -51,7 +51,7 @@ var raf;
 	
 	DownloadBlock.appendChild(HeaderNotify_);
 	
-	//initGoogleAds();
+	initGoogleAds();
 	
 	var Cookie = getCookie("GoogleAdBanner");
 
@@ -520,8 +520,8 @@ var raf;
 	var sc = document.createElement("script");
 	sc.setAttribute("async","");
 	sc.setAttribute("src","https://securepubads.g.doubleclick.net/tag/js/gpt.js");
-	//document.body.appendChild(sc);
-	document.getElementById("DownloadBlock").appendChild(sc);
+	document.body.appendChild(sc);
+	//document.getElementById("DownloadBlock").appendChild(sc);
 	
 	}
 	
@@ -709,8 +709,6 @@ var raf;
 
 	var Content1_slot;
 	
-	window.googletag = window.googletag || {cmd: []};
-		
 	googletag.cmd.push(function() {
 		
 	var mapping = 	googletag.sizeMapping().addSize([0, 0], ['fluid',[250, 250],[300, 250],[336, 280]]).build();
@@ -720,7 +718,7 @@ var raf;
 	.addService(googletag.pubads());
 	googletag.enableServices();
 
-	googletag.pubads().refresh([Content1_slot]);
+	//googletag.pubads().refresh([Content1_slot]);
 
 });
 
@@ -752,7 +750,7 @@ var raf;
         });*/
 	googletag.enableServices();
 
-	googletag.pubads().refresh([Content2_slot]);
+	//googletag.pubads().refresh([Content2_slot]);
 
 });
 	
@@ -784,7 +782,7 @@ var raf;
         });*/
 	googletag.enableServices();
 
-	googletag.pubads().refresh([Content3_slot]);
+	//googletag.pubads().refresh([Content3_slot]);
 
 });
 	

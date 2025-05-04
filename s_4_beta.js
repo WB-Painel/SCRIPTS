@@ -82,7 +82,7 @@ var raf;
 	/*if (window.googletag && googletag.apiReady) {*/
 	if (window.googletag && googletag.cmd && typeof googletag.cmd.push === "function") {
       
-	logs.innerText = "Carregado.";
+	logs.innerText = "Carregado..";
 	
         clearInterval(waitForGPT);
 	

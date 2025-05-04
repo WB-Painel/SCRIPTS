@@ -65,7 +65,7 @@ var raf;
 	
 	DownloadBlock.appendChild(HeaderNotify_);
 	
-	//initGoogleAds();
+	initGoogleAds();
 
 		//loadAdManagerScript();
 	
@@ -559,7 +559,7 @@ var raf;
     }
 })();*/
 
-	/*function initGoogleAds(){
+	function initGoogleAds(){
 		
 	var sc = document.createElement("script");
 	sc.setAttribute("async","");
@@ -567,7 +567,7 @@ var raf;
 	document.head.append(sc);
 	//document.getElementById("DownloadBlock").appendChild(sc);
 	
-	}*/
+	}
 	
 	function setCookie(Name,int){
 	

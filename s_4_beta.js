@@ -51,7 +51,7 @@ var raf;
 	
 	DownloadBlock.appendChild(HeaderNotify_);
 	
-	initGoogleAds();
+	//initGoogleAds();
 	
 	var Cookie = getCookie("GoogleAdBanner");
 

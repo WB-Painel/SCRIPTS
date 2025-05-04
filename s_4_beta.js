@@ -81,7 +81,7 @@ var raf;
 	
 	if (window.googletag && googletag.apiReady) {
 
-	logs.innerText = "Carregado";
+	logs.innerText = "Carregado.";
 	
         clearInterval(waitForGPT);
 	

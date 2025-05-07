@@ -1044,7 +1044,7 @@ var ViewOne = false;
 	
 	function DisableAdClick(){
 
-	window.top.document.getElementById("Logs").innerText = "@";
+	//window.top.document.getElementById("Logs").innerText = "@";
 	
 	var AdOne = document.getElementById("BlockOne").children[0];
 

@@ -1044,8 +1044,8 @@ var ViewOne = false;
 	
 	function DisableAdClick(){
 
-	alert("1");
-		
+	document.getElementById("Logs").innerText = "A1";
+		/*
 	var AdOne = document.getElementById("Content1");
 
 	AdOne.style.opacity = "0.0";
@@ -1073,7 +1073,7 @@ var ViewOne = false;
 		
 	requestAnimationFrame(paint);
 	
-	EnableDownload();
+	EnableDownload();*/
 	
 	}
 	

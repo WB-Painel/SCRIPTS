@@ -1021,7 +1021,7 @@ var ViewOne = false;
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
 
-	ajustarTamanhoFonte();
+	//ajustarTamanhoFonte();
 	
 	DisableAdClick();
 	
@@ -1044,6 +1044,8 @@ var ViewOne = false;
 	
 	function DisableAdClick(){
 
+	alert("1");
+		
 	var AdOne = document.getElementById("Content1");
 
 	AdOne.style.opacity = "0.0";
@@ -1067,6 +1069,8 @@ var ViewOne = false;
 	
 	}
 
+		alert("2");
+		
 	requestAnimationFrame(paint);
 	
 	EnableDownload();
@@ -1074,7 +1078,9 @@ var ViewOne = false;
 	}
 	
 	function EnableDownload(){
-	
+
+		alert("3");
+		
 	setTimeout(function(){
 	
 	enabled = true;

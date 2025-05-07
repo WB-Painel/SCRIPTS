@@ -538,7 +538,7 @@ var ViewOne = false;
 	var sc = document.createElement("script");
 	sc.setAttribute("async","");
 	sc.setAttribute("src","https://securepubads.g.doubleclick.net/tag/js/gpt.js");
-	document.body.appendChild(sc);
+	document.head.appendChild(sc);
 	
 	}
 	

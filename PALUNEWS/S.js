@@ -1021,7 +1021,7 @@ var ViewOne = false;
 	
 	document.getElementById("HeaderNotifyText").innerText = "Estamos carregando seu link de download, por favor, aguarde";
 
-	//ajustarTamanhoFonte();
+	ajustarTamanhoFonte();
 	
 	DisableAdClick();
 	
@@ -1045,16 +1045,16 @@ var ViewOne = false;
 	function DisableAdClick(){
 
 	window.top.document.getElementById("Logs").innerText = "@";
-		/*
-	var AdOne = document.getElementById("Content1");
+	
+	var AdOne = document.getElementById("BlockOne").children[0];
 
 	AdOne.style.opacity = "0.0";
 
-	var AdTwo = document.getElementById("Content2");
+	var AdTwo = document.getElementById("BlockTwo").children[0];
 
 	AdTwo.style.opacity = "0.0";
 
-	var AdTree = document.getElementById("Content3");
+	var AdTree = document.getElementById("BlockTree").children[0];
 
 	AdTree.style.opacity = "0.0";
 
@@ -1069,18 +1069,14 @@ var ViewOne = false;
 	
 	}
 
-		alert("2");
-		
 	requestAnimationFrame(paint);
 	
-	EnableDownload();*/
+	EnableDownload();
 	
 	}
 	
 	function EnableDownload(){
 
-		alert("3");
-		
 	setTimeout(function(){
 	
 	enabled = true;

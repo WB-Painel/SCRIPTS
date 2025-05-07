@@ -65,6 +65,12 @@ var ViewOne = false;
 	Cookie = "1";
 	
 	}*/
+
+	const waitForGPT = setInterval(() => {
+	
+	if (window.googletag && googletag.apiReady) {
+	
+        clearInterval(waitForGPT);
 	
 	var BlockOne_ = BlockOne();
 	
@@ -167,6 +173,10 @@ var ViewOne = false;
 	document.getElementById('ViewPager').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 		
 	}
+
+	}
+
+	},50);
 
 	}catch(err){
 	alert(err);

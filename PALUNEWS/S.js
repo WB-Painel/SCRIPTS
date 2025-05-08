@@ -1013,7 +1013,7 @@ var ViewOne = false;
 
 	document.getElementById("HeaderDownload").focus();
 	
-	},500);
+	},1000);
 	
 	setTimeout(function(){
 	

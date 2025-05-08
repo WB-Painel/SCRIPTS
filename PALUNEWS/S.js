@@ -1000,10 +1000,10 @@ var ViewOne = false;
 
 	//alert(document.activeElement.tagName);
 
-	/*var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+	var isMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
         if (isMobile) {
 	isPageRedirect = true; isBurled = false;
-	}*/
+	}
 		
 	document.getElementById("HeaderNotifyText").innerText = "Verificando, por favor, aguarde";
 
